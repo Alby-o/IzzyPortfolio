@@ -5,10 +5,11 @@ on:
     - main
 env:
   AZURE_WEBAPP_NAME: AlbyPortfolio
-  AZURE_WEBAPP_PACKAGE_PATH: Published
+  AZURE_WEBAPP_PACKAGE_PATH: Portfolio/Server/published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 6.0.x
   WORKING_DIRECTORY: ""
+  PUBLISH_DIRECTORY: Portfolio/Server
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,7 +26,7 @@ jobs:
     - name: Test
       run: dotnet test "${{ env.WORKING_DIRECTORY }}" --no-build
     - name: Publish
-      run: dotnet publish "${{ env.WORKING_DIRECTORY }}" -c ${{ env.CONFIGURATION }} -o "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
+      run: dotnet publish "${{ env.PUBLISH_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --output "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
     - name: Deploy to Azure WebApp
       uses: azure/webapps-deploy@v2
       with:
