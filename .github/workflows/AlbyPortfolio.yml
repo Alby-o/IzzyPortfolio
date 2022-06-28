@@ -5,7 +5,7 @@ on:
     - main
 env:
   AZURE_WEBAPP_NAME: AlbyPortfolio
-  AZURE_WEBAPP_PACKAGE_PATH: Portfolio/Server/published
+  AZURE_WEBAPP_PACKAGE_PATH: Published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 6.0.x
   WORKING_DIRECTORY: ""
