@@ -24,4 +24,8 @@
     <ProjectReference Include="..\Shared\Portfolio.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\technology\" />
+  </ItemGroup>
+
 </Project>

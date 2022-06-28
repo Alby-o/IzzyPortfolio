@@ -1,5 +1,12 @@
 ﻿@page "/"
+@using Portfolio.Shared
 
 <PageTitle>Alby Blyth</PageTitle>
 
-<h1>Hello world!</h1>
+<h2>Hello world!</h2>
+
+@foreach(var work in PortfolioProvider.Portfolio.WorkHistory) {
+    <work>
+        <h3>@work.CompanyName</h3>
+    </work>
+}

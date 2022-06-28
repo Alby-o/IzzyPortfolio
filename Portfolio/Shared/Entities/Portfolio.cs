@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Portfolio.Shared.Entities
 {
-    public class Portfolio
+    public class SitePortfolio
     {
         public virtual string? Name { get; set; }
         public virtual string? Email { get; set; }

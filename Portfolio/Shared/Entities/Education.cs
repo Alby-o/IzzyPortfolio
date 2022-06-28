@@ -12,7 +12,7 @@ namespace Portfolio.Shared.Entities
         public virtual string? Degree { get; set; }
         public virtual double GPA { get; set; }
         public virtual DateOnly GraduationDate { get; set; }
-        public virtual IList<string> Responsibilities { get; set; } = new List<string>();
+        public virtual IList<string> Achievements { get; set; } = new List<string>();
 
     }
 }

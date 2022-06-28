@@ -11,6 +11,7 @@ namespace Portfolio.Shared.Entities
         public virtual string? Position { get; set; }
         public virtual string? CompanyName { get; set; }
         public virtual string? CompanyUrl { get; set; }
+        public virtual string? Location { get; set; }
         public virtual DateOnly StartDate { get; set; }
 
         /// <summary>
