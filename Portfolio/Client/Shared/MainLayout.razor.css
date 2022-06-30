@@ -1,0 +1,33 @@
+﻿.page {
+  padding: 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+h1 {
+  display: inline-block;
+  transition: color 0.2s;
+}
+h1:hover {
+  transition: color 0.2s;
+}
+.work h1:hover {
+  color: #853EF3;
+}
+.education h1:hover {
+  color: #23CB89;
+}
+.achievements h1:hover {
+  color: wheat;
+}
+h1::after {
+  content: "";
+  display: block;
+  width: 95%;
+  border-bottom: 2px solid #333;
+  position: relative;
+  left: 9%;
+}

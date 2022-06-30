@@ -1,0 +1,83 @@
+﻿nav {
+  height: 0;
+}
+nav ::deep a {
+  display: block;
+  width: 500px;
+  position: relative;
+  left: -80px;
+  transition: left 0.3s;
+  margin: 40px 0;
+}
+nav ::deep a:hover {
+  left: -40px;
+}
+nav.closed ::deep a {
+  transition: left 0.3s;
+  left: -540px;
+}
+nav-item {
+  background: #232323;
+  display: inline-block;
+  color: white;
+  font-weight: 600;
+  font-size: 36px;
+  padding: 10px 40px;
+  transition: background 0.2s;
+  padding-left: 80px;
+  width: 100%;
+  clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 100%, 0px 100%);
+}
+nav-item:hover {
+  transition: background 0.2s;
+}
+.work nav-item:hover {
+  background: #853EF3;
+}
+.education nav-item:hover {
+  background: #23CB89;
+}
+.achievements nav-item:hover {
+  background: wheat;
+}
+.selected-nav-item {
+  background: #232323;
+  display: inline-block;
+  color: white;
+  font-weight: 600;
+  font-size: 36px;
+  padding: 10px 40px;
+  transition: background 0.2s;
+  position: absolute;
+  top: 36px;
+  clip-path: polygon(30px 0, 100% 0, 100% 100%, 0px 100%);
+  animation: slide-in 0.5s forwards;
+}
+.work .selected-nav-item {
+  background: #853EF3;
+}
+.education .selected-nav-item {
+  background: #23CB89;
+}
+.achievements .selected-nav-item {
+  background: wheat;
+}
+.selected-nav-item.open {
+  animation-name: slide-out;
+}
+@keyframes slide-in {
+  from {
+    left: -100vw;
+  }
+  to {
+    left: 480px;
+  }
+}
+@keyframes slide-out {
+  from {
+    left: 480px;
+  }
+  to {
+    left: -100vw;
+  }
+}

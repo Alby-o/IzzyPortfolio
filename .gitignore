@@ -345,8 +345,7 @@ healthchecksdb
 **/wwwroot/webfonts
 
 # ignore compiled css
-*.css
-*.razor.css
+*.min.css
 
 # keys 
 *.cer
