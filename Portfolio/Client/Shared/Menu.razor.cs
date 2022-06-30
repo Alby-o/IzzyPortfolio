@@ -32,6 +32,7 @@ namespace Portfolio.Client.Shared
 
         private async Task SetTheme(Theme? theme)
         {
+            // If the menu is closed, don't change the theme from any mouseover events
             if (!menuOpen) return;
 
             await ThemeChanged.InvokeAsync(theme);

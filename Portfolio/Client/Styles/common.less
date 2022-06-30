@@ -13,6 +13,10 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
 @greenFeature: #23CB89;
 @pinkFeature: #FD98E1;
 
+@workTheme: @purpleFeature;
+@educationTheme: @greenFeature;
+@achievementTheme: wheat;
+
 @darkText: #232323;
 @danger: #E60200;
 
@@ -26,3 +30,35 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
 @mobile: ~"only screen and (max-width: @{mobileSize})";
 @tablet: ~"only screen and (max-width: @{tabletSize})";
 @small-desktop: ~"only screen and (max-width: @{smallDesktopSize})";
+
+.themed-color() {
+    transition: color 0.2s;
+
+    .work & {
+        color: @workTheme;
+    }
+
+    .education & {
+        color: @educationTheme;
+    }
+
+    .achievements & {
+        color: @achievementTheme;
+    }
+}
+
+.themed-background() {
+    transition: background 0.2s;
+
+    .work & {
+        background: @workTheme;
+    }
+
+    .education & {
+        background: @educationTheme;
+    }
+
+    .achievements & {
+        background: @achievementTheme;
+    }
+}

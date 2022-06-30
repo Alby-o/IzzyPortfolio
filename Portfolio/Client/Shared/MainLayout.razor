@@ -3,7 +3,7 @@
 
 <CascadingValue Value="Portfolio">
     <CascadingValue Value="Theme">
-        <div class="page">
+        <div class="page @Theme?.ToString()?.ToLower()">
             <header>
                 <a href="/"><h1 tabindex=""><StylizedPunctuation Text="@(Portfolio.Name + ".")" /></h1></a>
             </header>
@@ -13,8 +13,6 @@
             <main>
                 @Body
             </main>
-
-            @Theme
         </div>
     </CascadingValue>
 </CascadingValue>
