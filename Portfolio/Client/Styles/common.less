@@ -13,36 +13,11 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
 @greenFeature: #23CB89;
 @pinkFeature: #FD98E1;
 
-@lightText: #AFB1B1;
 @darkText: #232323;
 @danger: #E60200;
 
-@labelColor: #737172;
-@backgroundHighlight: #A7D8BA26;
-
-@alternateSection: #FCFCFA;
-
 @borderColor: #E5E5E5;
 @borderColorFocus: @darkFeature;
-
-@border: 1.5px solid @borderColor;
-@borderFocus: 1.5px solid @darkFeature;
-
-@dropdownShadow: 0px 3px 6px #00000029;
-
-@lightBorder: #E2E2E2;
-
-// Page item spacing
-@pageItemDesktopSpacing: 120px;
-@pageItemTabletSpacing: 80px;
-@pageItemMobileSpacing: 55px;
-
-// Header info for use in auth/loading/app
-@headerHeight: 90px;
-@headerLeftPadding: 15px;
-@headerImageWidth: 272px;
-
-@cardBorderRadius: 43px;
 
 @smallDesktopSize: 1550px;
 @tabletSize: 1100px;
@@ -51,45 +26,3 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
 @mobile: ~"only screen and (max-width: @{mobileSize})";
 @tablet: ~"only screen and (max-width: @{tabletSize})";
 @small-desktop: ~"only screen and (max-width: @{smallDesktopSize})";
-
-
-.spaced-page-item() {
-    margin: @pageItemDesktopSpacing 0;
-
-    @media @tablet {
-        margin: @pageItemTabletSpacing 0;
-    }
-
-    @media @mobile {
-        margin: @pageItemMobileSpacing 0;
-    }
-}
-
-.centered-content() {
-    width: 80%;
-    margin: auto;
-    max-width: 1300px;
-}
-
-.hover-shadow(@color, @spread: 10px) {
-    box-shadow: fade(@color, 20%) 0px 0px 0px @spread;
-}
-
-.card(@borderColor: @borderColor) {
-    display: block;
-    border-radius: @cardBorderRadius;
-    border: 3px solid;
-    transition: box-shadow 0.2s, border 0.2s;
-    border-radius: 43px;
-    border: 3px solid @borderColor;
-    overflow: hidden;
-
-    &:hover {
-        border-color: @pinkFeature;
-        .hover-shadow(@pinkFeature);
-    }
-
-    [selected] & {
-        border-color: @purpleFeature;
-    }
-}

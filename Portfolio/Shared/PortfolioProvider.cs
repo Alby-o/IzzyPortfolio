@@ -9,9 +9,10 @@ namespace Portfolio.Shared
 {
     public static class PortfolioProvider
     {
-        public static readonly SitePortfolio Portfolio = new()
+        public static readonly SitePortfolio Portfolio   = new()
         {
-            Name = "Alexander (Alby) Blyth",
+            Name = "Alexander Blyth",
+            Nickname = "Alby",
             Email = "alexanderblyth5@gmail.com",
             PhoneNumber = "0488 526 998",
             GitHubUrl = "https://www.github.com/alby-o",

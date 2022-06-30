@@ -1,7 +1,27 @@
-﻿@inherits LayoutComponentBase
+﻿@using Portfolio.Shared
+@inherits LayoutComponentBase
 
-<div class="page">
-    <main>
-        @Body
-    </main>
-</div>
+<CascadingValue Value="Portfolio">
+    <CascadingValue Value="Theme">
+        <div class="page">
+            <header>
+                <a href="/"><h1 tabindex=""><StylizedPunctuation Text="@(Portfolio.Name + ".")" /></h1></a>
+            </header>
+
+            <Menu @bind-Theme="Theme" />
+
+            <main>
+                @Body
+            </main>
+
+            @Theme
+        </div>
+    </CascadingValue>
+</CascadingValue>
+
+
+@code {
+    private SitePortfolio Portfolio = PortfolioProvider.Portfolio;
+
+    private Theme? Theme;
+}

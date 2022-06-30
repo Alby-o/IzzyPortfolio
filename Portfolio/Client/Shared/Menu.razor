@@ -1,0 +1,18 @@
+﻿@if (selected != null)
+{
+    <a href="/" class="selected-nav-item @(menuOpen ? "open" : "closed")">
+            @(selected.Name)
+    </a>
+}
+
+<nav class="@(menuOpen ? "open" : "closed")">
+    @foreach (var item in MenuItems)
+    {
+        <NavLink Match="NavLinkMatch.Prefix" href="@item.Url" @onmouseover=@(() => SetTheme(item.Theme)) @onmouseout=@(() => SetTheme(null))><nav-item>@item.Name</nav-item></NavLink>
+    }
+</nav>
+
+
+@code {
+
+}

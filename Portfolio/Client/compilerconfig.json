@@ -2,5 +2,21 @@
   {
     "outputFile": "wwwroot/css/app.css",
     "inputFile": "Styles/app.less"
+  },
+  {
+    "outputFile": "Components/StylizedPunctuation.razor.css",
+    "inputFile": "Components/StylizedPunctuation.razor.less"
+  },
+  {
+    "outputFile": "Shared/MainLayout.razor.css",
+    "inputFile": "Shared/MainLayout.razor.less"
+  },
+  {
+    "outputFile": "Shared/Menu.razor.css",
+    "inputFile": "Shared/Menu.razor.less"
+  },
+  {
+    "outputFile": "Pages/Index.razor.css",
+    "inputFile": "Pages/Index.razor.less"
   }
 ]

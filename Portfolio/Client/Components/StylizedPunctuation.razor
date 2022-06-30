@@ -1,0 +1,11 @@
+﻿@foreach (var input in stylizedText)
+{
+    @if (input.stylized)
+    {
+        <span>@input.text</span>
+    }
+    else
+    {
+        @input.text
+    }
+}

@@ -9,6 +9,7 @@ namespace Portfolio.Shared.Entities
     public class SitePortfolio
     {
         public virtual string? Name { get; set; }
+        public virtual string? Nickname { get; set; }
         public virtual string? Email { get; set; }
         public virtual string? GitHubUrl { get; set; }
         public virtual string? LinkedInUrl { get; set; }

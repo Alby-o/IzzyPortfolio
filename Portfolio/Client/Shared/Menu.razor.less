@@ -1,0 +1,77 @@
+﻿@import (reference) ".././Styles/common.less";
+
+@width: 500px;
+
+nav {
+    height: 0;
+
+    ::deep {
+        a {
+            display: block;
+            width: @width;
+            position: relative;
+            left: -80px;
+            transition: left 0.3s;
+
+            &:hover {
+                left: -40px;
+            }
+        }
+    }
+
+    &.closed {
+        ::deep a {
+            transition: left 0.3s;
+            left: -(@width + 40px);
+        }
+    }
+}
+
+.nav-item() {
+    display: inline-block;
+    background: @purpleFeature;
+    color: white;
+    font-weight: 600;
+    font-size: 36px;
+    padding: 10px 40px;
+}
+
+nav-item {
+    .nav-item();
+    padding-left: 80px;
+    width: 100%;
+    margin: 20px 0;
+    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 100%, 0px 100%);
+}
+
+.selected-nav-item {
+    .nav-item();
+    position: absolute;
+    top: 36px;
+    clip-path: polygon(30px 0, 100% 0, 100% 100%, 0px 100%);
+    animation: slide-in 0.5s forwards;
+
+    &.open {
+        animation-name: slide-out;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        left: -100vw;
+    }
+
+    to {
+        left: 480px;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        left: 480px;
+    }
+
+    to {
+        left: -100vw;
+    }
+}
