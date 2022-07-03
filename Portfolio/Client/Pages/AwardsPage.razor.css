@@ -1,0 +1,24 @@
+﻿name {
+  font-weight: bold;
+}
+event {
+  color: orange;
+}
+aside i {
+  color: orange;
+  padding-right: 10px;
+}
+award {
+  display: block;
+  margin: 20px 0 40px;
+}
+.fa-youtube {
+  margin-left: 20px;
+  color: #FF0000;
+}
+p {
+  margin: 20px 0;
+}
+a {
+  font-weight: bold;
+}

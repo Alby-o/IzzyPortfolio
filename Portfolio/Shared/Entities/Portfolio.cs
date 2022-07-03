@@ -16,5 +16,6 @@ namespace Portfolio.Shared.Entities
         public virtual string? PhoneNumber { get; set; }
         public virtual IList<WorkExperience> WorkHistory { get; set; } = new List<WorkExperience>();
         public virtual IList<Education> EducationHistory { get; set; } = new List<Education>();
+        public virtual IList<Award> Awards { get; set; } = new List<Award>();
     }
 }

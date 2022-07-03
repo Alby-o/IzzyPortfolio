@@ -15,8 +15,8 @@
                 Theme = Theme.Education,
             },
             new MenuItem() {
-                Url = "/achievements",
-                Name = "Achievements",
+                Url = "/awards",
+                Name = "Awards",
                 Theme = Theme.Achievements,
             },
         };

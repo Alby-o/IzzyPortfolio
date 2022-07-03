@@ -1,0 +1,33 @@
+﻿@page "/awards"
+@using Portfolio.Shared
+@using Portfolio.Shared.Entities
+
+<PageTitle>Achievements | @Portfolio.Name</PageTitle>
+
+
+@foreach (var award in Portfolio.Awards)
+{
+    <award>
+        <h2>
+            <name>@award.Name</name> at <event>@award.Event</event>
+            @if (!string.IsNullOrEmpty(award.YoutubeUrl))
+            {
+                <a href="@award.YoutubeUrl"><i class="fa-brands fa-youtube"></i></a>
+            }
+        </h2>
+        <aside>
+            <date><i class="fa-solid fa-calendar"></i>@award.Date.Value.ToMonthYearString()</date>
+        </aside>
+        <p>
+            @award.Description
+        </p>
+        @if (!string.IsNullOrEmpty(award.ExternalUrl))
+        {
+            <a target="_blank" href="@award.ExternalUrl"><i class="fa-solid fa-external-link"></i> View More</a>
+        }
+    </award>
+}
+
+@code {
+    [CascadingParameter] public SitePortfolio Portfolio { get; set; } = default!;
+}

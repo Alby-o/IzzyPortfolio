@@ -17,12 +17,31 @@ namespace Portfolio.Shared
             PhoneNumber = "0488 526 998",
             GitHubUrl = "https://www.github.com/alby-o",
             LinkedInUrl = "https://www.linkedin.com/in/alby-blyth/",
+            Awards = new List<Award>
+            {
+                new Award
+                {
+                    Name = "People's Choice Award",
+                    Event = "GovHack",
+                    Date = new DateOnly(2018, 9, 1),
+                    ExternalUrl = "https://www.data.qld.gov.au/article/news-and-events/earlier-open-data-events/govhack-2018/DiscoVR",
+                    YoutubeUrl = "https://www.youtube.com/watch?v=Y5OG_eutXII",
+                    Description = "DiscoVR gives users a preview of new adventure locations around Australia before living the experience in the real world. Winning the 2018 GovHack People’s Choice award, the app immerses the user in a virtual reality environment, bringing the location and the surrounding conditions to life through a visual and aural experience, not with numbers and graphs, but with clouds, wind, rain and sunshine."
+                },
+                new Award
+                {
+                    Name = "Design Award Winner",
+                    Event = "UQCS Hackathon",
+                    Date = new DateOnly(2019, 8, 1),
+                    Description = "Created a 2D platforming game called Moonrisers in Unity. The game utilises Unity's block physics system to race to the moon, while trying to escape the deathly goo below them. The first to the spaceship has the choice to help their friends or leave them for dead."
+                }
+            },
             EducationHistory = new List<Education>
             {
                 new Education
                 {
                     GPA = 6.6,
-                    Degree = "Bachelor of Engineering (Honours)",
+                    Degree = "Bachelor of Engineering",
                     Institution = "The University of Queensland",
                     GraduationDate = new DateOnly(2021, 7, 1),
                     Achievements = new List<string>

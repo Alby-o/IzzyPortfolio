@@ -42,5 +42,9 @@
   {
     "outputFile": "Pages/EducationPage.razor.css",
     "inputFile": "Pages/EducationPage.razor.less"
+  },
+  {
+    "outputFile": "Pages/AwardsPage.razor.css",
+    "inputFile": "Pages/AwardsPage.razor.less"
   }
 ]
