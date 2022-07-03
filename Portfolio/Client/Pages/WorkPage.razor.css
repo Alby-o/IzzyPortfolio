@@ -8,6 +8,9 @@ nav {
   gap: 20px;
   flex-shrink: 0;
 }
+section {
+  margin: 20px 0 40px;
+}
 h2 {
   font-weight: normal;
 }

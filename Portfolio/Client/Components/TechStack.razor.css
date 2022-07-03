@@ -1,0 +1,28 @@
+﻿tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.technology {
+  display: block;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  transform: scale(1);
+  transition: transform 0.2s;
+}
+.technology:hover {
+  transform: scale(1.6);
+  z-index: 1;
+}
+.technology name {
+  margin-top: auto;
+  text-align: center;
+}
+.technology img {
+  max-width: 100%;
+  margin-bottom: 10px;
+  height: 80px;
+  object-fit: contain;
+  object-position: center;
+}

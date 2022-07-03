@@ -1,0 +1,13 @@
+﻿<tech-stack>
+    @foreach (var tech in Technologies)
+    {
+        <a class="technology" href="@tech.Url" target="_blank">
+            <img src="/images/technology/@tech.ImageName" alt="@tech.Name" />
+            <name>@tech.Name</name>
+        </a>
+    }
+</tech-stack>
+
+@code {
+    [Parameter] public IList<Technology> Technologies { get; set; } = new List<Technology>();
+}

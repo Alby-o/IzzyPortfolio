@@ -33,6 +33,19 @@
                     }
                 </ul>
             </section>
+            @if (Work.TechStack.Any())
+            {
+                <section>
+                    <h3>Tech Stack</h3>
+                    <TechStack Technologies="Work.TechStack" />
+                </section>
+            }
+            @if (Work.Projects.Any())
+            {
+                <section>
+                    <h3>Projects</h3>
+                </section>
+            }
         }
     </work>
 </work-page>
