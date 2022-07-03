@@ -1,0 +1,27 @@
+﻿@page "/work/{Company?}"
+@using Portfolio.Shared
+@using Portfolio.Shared.Entities
+
+<PageTitle>Work | @Portfolio.Name</PageTitle>
+
+<work-page>
+    <nav>
+        @foreach (var work in Portfolio.WorkHistory)
+        {
+            <Button Url="@GetWorkUrl(work)">@work.CompanyName</Button>
+        }
+    </nav>
+
+    <work>
+        @if (Work != null)
+        {
+            <h2>
+                <position>@Work.Position</position> at
+                <Company Name="@Work.CompanyName" Url="@Work.CompanyUrl" />
+            </h2>
+            <location><i class="fa-solid fa-location-dot"></i> @Work.Location</location>
+
+        }
+    </work>
+</work-page>
+

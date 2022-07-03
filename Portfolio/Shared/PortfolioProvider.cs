@@ -39,6 +39,7 @@ namespace Portfolio.Shared
                 {
                     CompanyName = "3CS Software",
                     CompanyUrl = "https://3cssoftware.com.au/",
+                    Slug = "3CS",
                     Location = "Brisbane",
                     StartDate = new DateOnly(2017, 12, 1),
                     Position = "Software Engineer",
@@ -65,6 +66,7 @@ namespace Portfolio.Shared
                 {
                     CompanyName = "The University of Queensland",
                     Location = "Brisbane",
+                    Slug = "UQ",
                     Position = "Teaching Assistant",
                     StartDate = new DateOnly(2018, 2, 1),
                     EndDate = new DateOnly(2020, 6, 1),
@@ -81,6 +83,7 @@ namespace Portfolio.Shared
                 {
                     CompanyName = "Empower",
                     CompanyUrl = "https://empower.me",
+                    Slug = "Empower",
                     Position = "Developer Intern",
                     Location = "San Francisco",
                     StartDate = new DateOnly(2020, 1, 1),

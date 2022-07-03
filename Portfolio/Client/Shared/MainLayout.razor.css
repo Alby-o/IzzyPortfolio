@@ -7,6 +7,9 @@
 main {
   flex: 1;
 }
+header {
+  margin-bottom: 40px;
+}
 header a {
   display: flex;
   align-items: flex-end;
@@ -67,6 +70,9 @@ selected-nav-item.open {
   }
 }
 @media only screen and (max-width: 500px) {
+  header {
+    margin-bottom: 20px;
+  }
   header a {
     display: block;
   }

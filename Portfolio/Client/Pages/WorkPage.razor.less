@@ -1,0 +1,30 @@
+﻿@import (reference) "../Styles/common.less";
+
+work-page {
+    display: flex;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+
+    ::deep {
+        .button + .button {
+            margin-top: 20px;
+        }
+    }
+}
+
+h2 {
+    font-weight: normal;
+}
+
+position{
+    font-weight: 600;
+}
+
+company {
+    font-weight: 600;
+    .themed-color();
+}

@@ -18,5 +18,17 @@
   {
     "outputFile": "Pages/Index.razor.css",
     "inputFile": "Pages/Index.razor.less"
+  },
+  {
+    "outputFile": "Components/Button.razor.css",
+    "inputFile": "Components/Button.razor.less"
+  },
+  {
+    "outputFile": "Pages/WorkPage.razor.css",
+    "inputFile": "Pages/WorkPage.razor.less"
+  },
+  {
+    "outputFile": "Components/Company.razor.css",
+    "inputFile": "Components/Company.razor.less"
   }
 ]

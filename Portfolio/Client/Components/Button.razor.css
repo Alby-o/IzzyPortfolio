@@ -1,0 +1,32 @@
+﻿.button {
+  display: inline-block;
+  border: 3px solid black;
+  background: transparent;
+  padding: 17px 40px;
+  border-radius: 80px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 600;
+  transition: box-shadow 0.2s;
+}
+.work .button {
+  color: #853EF3;
+  border-color: #853EF3;
+}
+.work .button:hover {
+  box-shadow: rgba(133, 62, 243, 0.2) 0 0 0 10px;
+}
+.education .button {
+  color: #853EF3;
+  border-color: #853EF3;
+}
+.education .button:hover {
+  box-shadow: rgba(35, 203, 137, 0.2) 0 0 0 10px;
+}
+.achievements .button {
+  color: #853EF3;
+  border-color: #853EF3;
+}
+.achievements .button:hover {
+  box-shadow: rgba(255, 165, 0, 0.2) 0 0 0 10px;
+}

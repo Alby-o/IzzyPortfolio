@@ -1,0 +1,26 @@
+﻿@if (!string.IsNullOrEmpty(Url))
+{
+    <a class="button" href="@Url" @onclick=OnButtonClick>
+        @ChildContent
+    </a>
+}
+else
+{
+    <button class="button" @onclick=OnButtonClick>
+        @ChildContent
+    </button>
+}
+
+@code {
+    [Parameter] public string? Url { get; set; }
+    [Parameter] public Action? OnClick { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    private void OnButtonClick()
+    {
+        if (OnClick != null)
+        {
+            OnClick();
+        }
+    }
+}

@@ -1,0 +1,26 @@
+﻿@import (reference) "../Styles/common.less";
+
+@threecsColor: #333;
+
+company {
+    .themed-color();
+
+    &.threecs {
+        color: @threecsColor;
+    }
+}
+
+threecs {
+    @scale: 0.7;
+    display: inline-block;
+    border-radius: 35px;
+    height: (70px * @scale);
+    width: (135px * @scale);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: (44px * @scale);
+    line-height: (67px * @scale);
+    color: #fff;
+    background: @threecsColor;
+}
