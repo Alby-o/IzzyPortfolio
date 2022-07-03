@@ -17,6 +17,14 @@ nav {
 
             &:hover {
                 left: -40px;
+
+                nav-item {
+                    .themed-background();
+                }
+            }
+
+            &:first-child {
+                margin-top: 0;
             }
         }
     }
@@ -29,56 +37,22 @@ nav {
     }
 }
 
-.nav-item() {
-    background: @darkText;
-    display: inline-block;
-    color: white;
-    font-weight: 600;
-    font-size: 36px;
-    padding: 10px 40px;
-    transition: background 0.2s;
-}
-
 nav-item {
     .nav-item();
     padding-left: 80px;
     width: 100%;
-    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 100%, 0px 100%);
-
-    &:hover {
-        .themed-background();
-    }
+    clip-path: @clipPathCutRight;
 }
 
-.selected-nav-item {
-    .nav-item();
-    .themed-background();
-    position: absolute;
-    top: 36px;
-    clip-path: polygon(30px 0, 100% 0, 100% 100%, 0px 100%);
-    animation: slide-in 0.5s forwards;
-
-    &.open {
-        animation-name: slide-out;
-    }
-}
-
-@keyframes slide-in {
-    from {
-        left: -100vw;
+@media @mobile-small {
+    nav {
+        ::deep a {
+            margin: 20px 0;
+            width: 300px;
+        }
     }
 
-    to {
-        left: 480px;
-    }
-}
-
-@keyframes slide-out {
-    from {
-        left: 480px;
-    }
-
-    to {
-        left: -100vw;
+    nav-item {
+        font-size: 24px;
     }
 }

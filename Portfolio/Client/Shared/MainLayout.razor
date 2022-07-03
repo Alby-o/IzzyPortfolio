@@ -5,10 +5,15 @@
     <CascadingValue Value="Theme">
         <div class="page @Theme?.ToString()?.ToLower()">
             <header>
-                <a href="/"><h1 tabindex=""><StylizedPunctuation Text="@(Portfolio.Name + ".")" /></h1></a>
+                <a href="/">
+                    <h1 tabindex=""><StylizedPunctuation Text="@(Portfolio.Name + ".")" /></h1>
+                    <selected-nav-item class="@(menuOpen ? "open" : "closed")">
+                        @(selected?.Name?? "...")
+                    </selected-nav-item>
+                </a>
             </header>
 
-            <Menu @bind-Theme="Theme" />
+            <Menu @bind-Theme="menuHoverTheme" Open="menuOpen" MenuItems="MenuItems" />
 
             <main>
                 @Body
@@ -17,9 +22,3 @@
     </CascadingValue>
 </CascadingValue>
 
-
-@code {
-    private SitePortfolio Portfolio = PortfolioProvider.Portfolio;
-
-    private Theme? Theme;
-}

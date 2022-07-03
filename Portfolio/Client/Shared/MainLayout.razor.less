@@ -11,6 +11,13 @@ main {
     flex: 1;
 }
 
+header {
+    a {
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
 h1 {
     display: inline-block;
     transition: color 0.2s;
@@ -26,5 +33,40 @@ h1 {
         border-bottom: 2px solid #333;
         position: relative;
         left: 9%;
+    }
+}
+
+
+selected-nav-item {
+    .nav-item();
+    .themed-background();
+    position: relative;
+    clip-path: @clipPathCutLeft;
+    left: -3px;
+    transition: left 0.3s ease-in-out;
+
+    &.open {
+        left: -100vw;
+    }
+
+    @media @mobile {
+        font-size: 24px;
+        left: 0;
+    }
+}
+
+@media @mobile-small {
+    header a {
+        display: block;
+    }
+
+    selected-nav-item {
+        display: block;
+        margin-top: 5px;
+        clip-path: unset;
+    }
+
+    h1::after {
+        display: none;
     }
 }

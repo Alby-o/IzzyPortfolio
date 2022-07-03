@@ -43,7 +43,7 @@ h6 {
 h1 {
   line-height: 63px;
   font-size: 56px;
-  margin-bottom: 30px;
+  margin-bottom: 0;
   font-weight: 600;
 }
 h2 {

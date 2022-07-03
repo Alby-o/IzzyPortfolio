@@ -12,10 +12,11 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
 @purpleFeature: #853EF3;
 @greenFeature: #23CB89;
 @pinkFeature: #FD98E1;
+@orangeFeature: orange;
 
 @workTheme: @purpleFeature;
 @educationTheme: @greenFeature;
-@achievementTheme: wheat;
+@achievementTheme: @orangeFeature;
 
 @darkText: #232323;
 @danger: #E60200;
@@ -26,7 +27,12 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
 @smallDesktopSize: 1550px;
 @tabletSize: 1100px;
 @mobileSize: 800px;
+@mobileSmallSize: 500px;
 
+@clipPathCutRight: polygon(0 0, calc(100% - 30px) 0, 100% 100%, 0 100%);
+@clipPathCutLeft: polygon(30px 0, 100% 0, 100% 100%, 0 100%);
+
+@mobile-small: ~"only screen and (max-width: @{mobileSmallSize})";
 @mobile: ~"only screen and (max-width: @{mobileSize})";
 @tablet: ~"only screen and (max-width: @{tabletSize})";
 @small-desktop: ~"only screen and (max-width: @{smallDesktopSize})";
@@ -61,4 +67,14 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
     .achievements & {
         background: @achievementTheme;
     }
+}
+
+.nav-item() {
+    background: @darkText;
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+    font-size: 36px;
+    padding: 10px 40px;
+    transition: background 0.2s;
 }
