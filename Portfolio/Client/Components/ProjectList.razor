@@ -1,0 +1,28 @@
+﻿<project-list>
+    @foreach (var project in Projects)
+    {
+        <project-container class="@(project.Name?.Replace(" ", "").ToLower())" style="background-image:url('/images/projects/@project.Image')">
+            <project>
+
+                <name>
+                    @if (!string.IsNullOrEmpty(project.LogoImage))
+                    {
+                        <img src="/images/projects/@(project.LogoImage)" alt="@project.Name" />
+                    }
+                    else
+                    {
+                        @project.Name
+                    }
+                </name>
+                <description>@project.Description</description>
+
+                <a href="@project.ExternalUrl"><i class="fa-solid fa-external-link"></i> View Project</a>
+            </project>
+        </project-container>
+    }
+
+</project-list>
+
+@code {
+    [Parameter] public IList<Project> Projects { get; set; } = new List<Project>();
+}

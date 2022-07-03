@@ -13,56 +13,64 @@ namespace Portfolio.Shared
         {
             Name = ".NET",
             Description = "The full dotnet experience, using C# to deliver applications for the web and mobile phones using .NET MAUI.",
-            ImageName = "dotnet.png"
+            ImageName = "dotnet.png",
+            Url= "https://dotnet.microsoft.com/en-us/",
         };
 
         public static readonly Technology Android = new()
         {
             Name = "Android",
             Description = "Android was used in conjunction to Flutter, Cordova and .NET MAUI to create and deploy mobile apps to the Google Play Store.",
-            ImageName = "dotnet.png"
+            ImageName = "android.png",
+            Url = "http://android.com/",
         };
 
         public static readonly Technology Aurelia = new()
         {
             Name = "Aurelia",
             Description = "Aurelia is a font-end javascript framework (and also my favourite javascript framework) that was used to develop Hourly Time.",
-            ImageName = "aurelia.png"
+            ImageName = "aurelia.svg",
+            Url = "https://aurelia.io/",
         };
 
         public static readonly Technology Azure = new()
         {
             Name = "Azure",
             Description = "Azure Devops was used for CI/CD for just about every project worked on.",
-            ImageName = "azure.png"
+            ImageName = "azure.png",
+            Url = "https://azure.microsoft.com/en-au/"
         };
 
         public static readonly Technology Blazor = new()
         {
             Name = "Blazor",
             Description = "Blazor is Microsoft's solution to the next step in web evolution: Web Assembly. This website is built using Blazor!",
-            ImageName = "blazor.png"
+            ImageName = "blazor.png",
+            Url = "https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor"
         };
 
         public static readonly Technology Cordova = new()
         {
             Name = "Cordova",
             Description = "Cordova was used to build Android and iOS apps for Hourly Time. The Aurelia web app was bundled with Cordova to reuse the existing code base.",
-            ImageName = "cordova.png"
+            ImageName = "cordova.png",
+            Url = "https://cordova.apache.org/"
         };
 
         public static readonly Technology Flutter = new()
         {
             Name = "Flutter",
             Description = "Flutter was used to build an Android and iOS app for checking in children at early childcare centers.",
-            ImageName = "flutter.png"
+            ImageName = "flutter.png",
+            Url = "https://flutter.dev/"
         };
 
         public static readonly Technology iOS = new()
         {
             Name = "iOS",
             Description = "Hourly's mobile app is developed and deployed to the Apple App Store.",
-            ImageName = "ios.png"
+            ImageName = "ios.png",
+            Url = "https://developer.apple.com/",
         };
 
         public static readonly Technology Less = new()
@@ -70,6 +78,7 @@ namespace Portfolio.Shared
             Name = "Less",
             Description = "Less is my css preprocessor of choice, and it was used to style this website here!",
             ImageName = "less.png",
+            Url = "https://lesscss.org/",
         };
 
         public static readonly Technology React = new()
@@ -77,6 +86,7 @@ namespace Portfolio.Shared
             Name = "React",
             Description = "React was used to develop internal tools while interning at Empower.",
             ImageName = "react.png",
+            Url = "https://reactjs.org/",
         };
 
         public static readonly Technology Typescript = new()
@@ -84,6 +94,7 @@ namespace Portfolio.Shared
             Name = "Typescript",
             Description = "A world without types is a pain, which is why I love Typescript! For any javascript work, typescript is my go-to.",
             ImageName = "typescript.png",
+            Url = "https://www.typescriptlang.org/",
         };
     }
 }

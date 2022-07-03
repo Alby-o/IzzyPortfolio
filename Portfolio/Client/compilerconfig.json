@@ -30,5 +30,13 @@
   {
     "outputFile": "Components/Company.razor.css",
     "inputFile": "Components/Company.razor.less"
+  },
+  {
+    "outputFile": "Components/TechStack.razor.css",
+    "inputFile": "Components/TechStack.razor.less"
+  },
+  {
+    "outputFile": "Components/ProjectList.razor.css",
+    "inputFile": "Components/ProjectList.razor.less"
   }
 ]

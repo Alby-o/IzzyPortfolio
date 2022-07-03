@@ -9,7 +9,7 @@ namespace Portfolio.Shared
 {
     public static class PortfolioProvider
     {
-        public static readonly SitePortfolio Portfolio   = new()
+        public static readonly SitePortfolio Portfolio = new()
         {
             Name = "Alexander Blyth",
             Nickname = "Alby",
@@ -60,6 +60,32 @@ namespace Portfolio.Shared
                         TechnologyProvider.iOS,
                         TechnologyProvider.Typescript,
                         TechnologyProvider.Less,
+                    },
+                    Projects = new List<Project>()
+                    {
+                        new Project()
+                        {
+                            Name = "Hourly",
+                            ExternalUrl = "https://hourlytime.com",
+                            Image = "hourly.png",
+                            LogoImage = "hourly-logo.svg",
+                            Description = "Hourly is a time tracking application used by small to mid-sized businesses. I worked within a small team to develop Hourly using Aurelia and Typescript! I also lead the development on the Hourly mobile apps, using Cordova."
+                        },
+                        new Project() {
+                            Name = "iQumulate Public Website",
+                            ExternalUrl = "https://iqumulate.com",
+                            Image = "iq.jpg",
+                            LogoImage = "iq-logo.svg",
+                            Description = "I was the lead developer working on the iQumulate public website. The website was developed using a dotnet MVC solution."
+                        },
+                        new Project()
+                        {
+                            Name = "My Kids Vision",
+                            ExternalUrl = "https://www.mykidsvision.org/en-us",
+                            Image = "mkv.png",
+                            LogoImage = "mkv-logo.png",
+                            Description = "I'm currently the lead developer on the My Kids Vision website rebranding. My Kids Vision is a public informational website for parents of children with Myopia (short sightedness)."
+                        }
                     }
                 },
                 new WorkExperience
@@ -77,6 +103,17 @@ namespace Portfolio.Shared
                         "Worked on Empower’s internal tools using React.",
                         "Collaborated with a team of 30 employees in Empower’s San Francisco office.",
                         "Provided consultation on SEO, best practices and optimisation.",
+                    },
+                    Projects = new List<Project>()
+                    {
+                        new Project()
+                        {
+                            Name = "Empower Public Website",
+                            ExternalUrl = "https://empower.me/",
+                            Image = "empower.png",
+                            LogoImage = "empower-logo.svg",
+                            Description = "I helped develop the empower public website alongside Empower's internal management tools."
+                        }
                     }
                 },
                 new WorkExperience
