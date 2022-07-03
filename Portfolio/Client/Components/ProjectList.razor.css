@@ -18,13 +18,13 @@ project:last-child {
 name {
   font-size: 20px;
   display: block;
-  margin-bottom: 20px;
 }
 img {
   max-width: 200px;
 }
 description {
   font-size: 18px;
+  margin: 20px 0;
   flex: 1;
 }
 .empowerpublicwebsite img {
@@ -47,4 +47,14 @@ a {
 }
 i {
   margin-right: 10px;
+}
+@media only screen and (max-width: 800px) {
+  project {
+    padding: 20px 40px;
+  }
+  description {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
 }

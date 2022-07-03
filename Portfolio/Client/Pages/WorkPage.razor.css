@@ -51,4 +51,12 @@ aside i {
     flex-direction: row;
     flex-wrap: wrap;
   }
+  location {
+    display: block;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  dates {
+    display: block;
+  }
 }

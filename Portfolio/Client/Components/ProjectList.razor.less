@@ -1,4 +1,6 @@
-﻿project-container {
+﻿@import (reference) "../Styles/common.less";
+
+project-container {
     display: block;
     margin: 10px 0 20px;
     background-position: center;
@@ -21,7 +23,6 @@ project {
 name {
     font-size: 20px;
     display: block;
-    margin-bottom: 20px;
 }
 
 img {
@@ -30,6 +31,7 @@ img {
 
 description {
     font-size: 18px;
+    margin: 20px 0;
     flex: 1;
 }
 
@@ -62,4 +64,16 @@ a {
 
 i {
     margin-right: 10px;
+}
+
+@media @mobile {
+    project {
+        padding: 20px 40px;
+    }
+
+    description {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+    }
 }
