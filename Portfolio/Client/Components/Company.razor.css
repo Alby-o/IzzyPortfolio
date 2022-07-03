@@ -14,15 +14,23 @@ company.threecs {
   color: #333;
 }
 threecs {
-  display: inline-block;
-  border-radius: 35px;
   height: 49px;
   width: 94.5px;
+  font-size: 30.8px;
+  line-height: 46.9px;
+  display: inline-block;
+  border-radius: 35px;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   text-align: center;
-  font-size: 30.8px;
-  line-height: 46.9px;
   color: #fff;
   background: #333;
+}
+@media only screen and (max-width: 800px) {
+  threecs {
+    height: 35px;
+    width: 67.5px;
+    font-size: 22px;
+    line-height: 33.5px;
+  }
 }

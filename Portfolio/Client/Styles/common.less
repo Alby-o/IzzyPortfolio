@@ -37,6 +37,10 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
 @tablet: ~"only screen and (max-width: @{tabletSize})";
 @small-desktop: ~"only screen and (max-width: @{smallDesktopSize})";
 
+.box-shadow(@color, @size: 10px) {
+    box-shadow: fade(@color, 20%) 0 0 0 @size;
+}
+
 .themed-color() {
     .themed(color);
 }

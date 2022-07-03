@@ -38,13 +38,11 @@ h1 {
 h2 {
     font-size: 32px;
     line-height: 44px;
-    margin-bottom: 30px;
 }
 
 h3 {
     font-size: 21px;
     line-height: 30px;
-    margin-bottom: 20px;
 }
 
 
@@ -61,6 +59,35 @@ p {
     font-size: 16px;
     line-height: 27px;
     margin: 1rem 0 2rem 0;
+}
+
+ul {
+    list-style: none;
+    
+    li {
+        display: flex;
+        align-items: flex-start;
+        font-size: 20px;
+        margin: 10px 0;
+
+        &::before {
+            @size: 15px;
+            content: "";
+            display: inline-block;
+            min-height: @size;
+            min-width: @size;
+            margin-right: 20px;
+            margin-top: (@size / 3) + 2.5px;
+            margin-left: (@size / 3);
+            
+            .work & {
+                border-radius: 50%;
+                background: @workTheme;
+                .box-shadow(@workTheme, (@size / 3));
+            }
+            .themed-background();
+        }
+    }
 }
 
 #blazor-error-ui {
@@ -85,7 +112,7 @@ p {
         line-height: 26px;
     }
 
-    h1, h2 {
+    h1 {
         text-align: center;
     }
 

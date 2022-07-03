@@ -49,12 +49,10 @@ h1 {
 h2 {
   font-size: 32px;
   line-height: 44px;
-  margin-bottom: 30px;
 }
 h3 {
   font-size: 21px;
   line-height: 30px;
-  margin-bottom: 20px;
 }
 a {
   text-decoration: none;
@@ -67,6 +65,39 @@ p {
   font-size: 16px;
   line-height: 27px;
   margin: 1rem 0 2rem 0;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  display: flex;
+  align-items: flex-start;
+  font-size: 20px;
+  margin: 10px 0;
+}
+ul li::before {
+  content: "";
+  display: inline-block;
+  min-height: 15px;
+  min-width: 15px;
+  margin-right: 20px;
+  margin-top: 7.5px;
+  margin-left: 5px;
+  transition: background 0.2s;
+}
+.work ul li::before {
+  border-radius: 50%;
+  background: #853EF3;
+  box-shadow: rgba(133, 62, 243, 0.2) 0 0 0 5px;
+}
+.work ul li::before {
+  background: #853EF3;
+}
+.education ul li::before {
+  background: #23CB89;
+}
+.achievements ul li::before {
+  background: orange;
 }
 #blazor-error-ui {
   display: none;
@@ -87,8 +118,7 @@ p {
     font-size: 15px;
     line-height: 26px;
   }
-  h1,
-  h2 {
+  h1 {
     text-align: center;
   }
   h1 {

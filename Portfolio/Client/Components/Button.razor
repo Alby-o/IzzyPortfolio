@@ -1,18 +1,30 @@
-﻿@if (!string.IsNullOrEmpty(Url))
-{
-    <a class="button" href="@Url" @onclick=OnButtonClick>
-        @ChildContent
-    </a>
-}
-else
-{
-    <button class="button" @onclick=OnButtonClick>
-        @ChildContent
-    </button>
-}
+﻿<button-container>
+    @if (!string.IsNullOrEmpty(Url))
+    {
+        if (ShowSelected)
+        {
+            <NavLink Match="NavLinkMatch.All" class="button" href="@Url" @onclick=OnButtonClick>
+                @ChildContent
+            </NavLink>
+        }
+        else
+        {
+            <a class="button" href="@Url" @onclick=OnButtonClick>
+                @ChildContent
+            </a>
+        }
+    }
+    else
+    {
+        <button class="button" @onclick=OnButtonClick>
+            @ChildContent
+        </button>
+    }
+</button-container>
 
 @code {
     [Parameter] public string? Url { get; set; }
+    [Parameter] public bool ShowSelected { get; set; } = true;
     [Parameter] public Action? OnClick { get; set; }
     [Parameter] public RenderFragment? ChildContent { get; set; }
 

@@ -17,17 +17,44 @@ namespace Portfolio.Client.Pages
         protected override void OnParametersSet()
         {
             base.OnParametersSet();
+
             if (Company != null)
             {
                 // This could be more efficient, but seeing as we'll never have more than 3 companies
                 // any optimisation isn't really worth it
                 Work = Portfolio.WorkHistory.FirstOrDefault(w => w.Slug == Company);
             }
+
+            if (Work == null)
+            {
+                var slug = Portfolio.WorkHistory.FirstOrDefault()?.Slug;
+                NavManager.NavigateTo($"/work/{slug}");
+            }
         }
 
         private static string GetWorkUrl(WorkExperience work)
         {
             return $"work/{work?.Slug}";
+        }
+
+        private string StartDate
+        {
+            get
+            {
+                if (Work == null) return "";
+
+                return Work.StartDate.ToString("MMM yyyy");
+            }
+        }
+
+        private string EndDate
+        {
+            get
+            {
+                if (Work?.EndDate == null) return "Present";
+
+                return Work.EndDate.Value.ToString("MMM yyyy");
+            }
         }
     }
 }

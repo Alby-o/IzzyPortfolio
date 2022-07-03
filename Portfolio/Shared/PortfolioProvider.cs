@@ -42,10 +42,10 @@ namespace Portfolio.Shared
                     Slug = "3CS",
                     Location = "Brisbane",
                     StartDate = new DateOnly(2017, 12, 1),
-                    Position = "Software Engineer",
+                    Position = "Full Stack Developer",
                     Responsibilities = new List<string>
                     {
-                        "Worked with client's needs and requirements to develop effective and beautiful solutions to their individual needs.",
+                        "Worked with client's needs and requirements to develop effective and beautiful products.",
                         "Developed applications in varied fields including eyecare, insurance premium funding, childcare and business management.",
                         "Developed internal tools using source generation techniques to allow 3CS developers to quickly develop a full stack web application."
                     },
@@ -64,6 +64,23 @@ namespace Portfolio.Shared
                 },
                 new WorkExperience
                 {
+                    CompanyName = "Empower",
+                    CompanyUrl = "https://empower.me",
+                    Slug = "Empower",
+                    Position = "Font-End Developer",
+                    Location = "San Francisco",
+                    StartDate = new DateOnly(2020, 1, 1),
+                    EndDate = new DateOnly(2020, 2, 1),
+                    TechStack = new List<Technology> { TechnologyProvider.React },
+                    Responsibilities = new List<string>
+                    {
+                        "Worked on Empower’s internal tools using React.",
+                        "Collaborated with a team of 30 employees in Empower’s San Francisco office.",
+                        "Provided consultation on SEO, best practices and optimisation.",
+                    }
+                },
+                new WorkExperience
+                {
                     CompanyName = "The University of Queensland",
                     Location = "Brisbane",
                     Slug = "UQ",
@@ -73,29 +90,12 @@ namespace Portfolio.Shared
                     CompanyUrl = "https://uq.edu.au/",
                     Responsibilities = new List<string>
                     {
-                        "Conducted practicals and tutorials in Software Engineering classes - motivating and guiding students to achieve excellence",
-                        "Taught introduction to web design, teaching students human-centred techniques to design and develop websites in HTML, CSS and JavaScript",
-                        "Taught programming in the large, teaching students to employ techniques in Java to help support good practice, follow documentation and learn object-oriented programming",
-                        "Taught design studio two, where students worked in large classes to make a game using professional tools and processes such as git, SonarQube, JaCoCo, Jenkins, and Kanban",
+                        "Conducted practicals and tutorials in Software Engineering classes - motivating and guiding students to achieve excellence.",
+                        "Taught introduction to web design, teaching students human-centred techniques to design and develop websites in HTML, CSS and JavaScript.",
+                        "Taught programming in the large, teaching students to employ techniques in Java to help support good practice, follow documentation and learn object-oriented programming.",
+                        "Taught design studio two, where students worked in large classes to make a game using professional tools and processes such as git, SonarQube, JaCoCo, Jenkins, and Kanban.",
                     },
                 },
-                new WorkExperience
-                {
-                    CompanyName = "Empower",
-                    CompanyUrl = "https://empower.me",
-                    Slug = "Empower",
-                    Position = "Developer Intern",
-                    Location = "San Francisco",
-                    StartDate = new DateOnly(2020, 1, 1),
-                    EndDate = new DateOnly(2020, 2, 1),
-                    TechStack = new List<Technology> { TechnologyProvider.React },
-                    Responsibilities = new List<string>
-                    {
-                        "Worked on Empower’s internal tools using React",
-                        "Collaborated with a team of 30 employees in Empower’s San Francisco office",
-                        "Provided consultation on SEO, best practices and optimisation",
-                    }
-                }
             }
         };
     }

@@ -15,12 +15,24 @@
     <work>
         @if (Work != null)
         {
-            <h2>
-                <position>@Work.Position</position> at
-                <Company Name="@Work.CompanyName" Url="@Work.CompanyUrl" />
-            </h2>
-            <location><i class="fa-solid fa-location-dot"></i> @Work.Location</location>
-
+            <header>
+                <h2>
+                    <position>@Work.Position</position> at
+                    <Company Name="@Work.CompanyName" Url="@Work.CompanyUrl" />
+                </h2>
+            </header>
+            <aside>
+                <location><i class="fa-solid fa-location-dot"></i> @Work.Location</location>
+                <dates><i class="fa-solid fa-calendar"></i> @StartDate - @EndDate</dates>
+            </aside>
+            <section>
+                <ul>
+                    @foreach (var item in Work.Responsibilities)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            </section>
         }
     </work>
 </work-page>

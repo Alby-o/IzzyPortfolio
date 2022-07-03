@@ -2,29 +2,49 @@
 
 work-page {
     display: flex;
+    gap: 40px;
 }
 
 nav {
     display: flex;
     flex-direction: column;
-    margin-right: 40px;
-
-    ::deep {
-        .button + .button {
-            margin-top: 20px;
-        }
-    }
+    gap: 20px;
+    flex-shrink: 0;
 }
 
 h2 {
     font-weight: normal;
 }
 
-position{
+position {
     font-weight: 600;
 }
 
 company {
     font-weight: 600;
     .themed-color();
+}
+
+location {
+    margin-right: 20px;
+}
+
+aside {
+    i {
+        color: @workTheme;
+        padding-right: 5px;
+    }
+}
+
+@media @mobile {
+    work-page {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }

@@ -1,34 +1,48 @@
 ﻿@import (reference) "../Styles/common.less";
 
 .button-theme(@themeColor) {
-    color: @workTheme;
-    border-color: @workTheme;
+    color: @themeColor;
+    border-color: @themeColor;
+    transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 
     &:hover {
-        box-shadow: fade(@themeColor, 20%) 0 0 0 10px;
+        .box-shadow(@themeColor);
+    }
+
+    &.active {
+        background: @themeColor;
+        color: white;
     }
 }
 
-.button {
-    display: inline-block;
-    border: 3px solid black;
-    background: transparent;
-    padding: 17px 40px;
-    border-radius: 80px;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: 600;
-    transition: box-shadow 0.2s;
+button-container ::deep {
+    .button {
+        display: inline-block;
+        border: 3px solid black;
+        background: transparent;
+        padding: 17px 40px;
+        border-radius: 54px;
+        cursor: pointer;
+        font-size: 24px;
+        font-weight: 600;
+        transition: box-shadow 0.2s;
 
-    .work & {
-        .button-theme(@workTheme);
-    }
+        .work & {
+            .button-theme(@workTheme);
+        }
 
-    .education & {
-        .button-theme(@educationTheme);
-    }
+        .education & {
+            .button-theme(@educationTheme);
+        }
 
-    .achievements & {
-        .button-theme(@achievementTheme);
+        .achievements & {
+            .button-theme(@achievementTheme);
+        }
+
+        @media @mobile {
+            font-size: 14px;
+            padding: 10px 20px;
+            border-width: 2px;
+        }
     }
 }
