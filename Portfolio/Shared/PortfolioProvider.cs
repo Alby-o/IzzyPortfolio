@@ -27,9 +27,10 @@ namespace Portfolio.Shared
                     GraduationDate = new DateOnly(2021, 7, 1),
                     Achievements = new List<string>
                     {
-                        "Featured in the 2019 Innovation Showcase for Excellence in Design",
-                        "Awarded dean’s commendations for academic excellence on six occassions",
-                        "Received the ENGG1200 Engineering Design Award 2016 for innovation and excellence in a first-year engineering project"
+                        "Graduated with First Class Honours.",
+                        "Featured in the 2019 Innovation Showcase for Excellence in Design.",
+                        "Awarded dean’s commendations for academic excellence on six occassions.",
+                        "Received the ENGG1200 Engineering Design Award 2016 for innovation and excellence in a first-year engineering project."
                     }
                 }
             },

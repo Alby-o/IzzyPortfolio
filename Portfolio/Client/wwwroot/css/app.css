@@ -49,6 +49,7 @@ h1 {
 h2 {
   font-size: 32px;
   line-height: 44px;
+  font-weight: normal;
 }
 h3 {
   font-size: 24px;
@@ -84,21 +85,15 @@ ul li::before {
   margin-right: 20px;
   margin-top: 7.5px;
   margin-left: 5px;
-  transition: background 0.2s;
 }
 .work ul li::before {
   border-radius: 50%;
   background: #853EF3;
   box-shadow: rgba(133, 62, 243, 0.2) 0 0 0 5px;
 }
-.work ul li::before {
-  background: #853EF3;
-}
 .education ul li::before {
   background: #23CB89;
-}
-.achievements ul li::before {
-  background: orange;
+  box-shadow: rgba(35, 203, 137, 0.2) 0 0 0 5px;
 }
 #blazor-error-ui {
   display: none;

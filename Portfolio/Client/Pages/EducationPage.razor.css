@@ -1,0 +1,34 @@
+﻿degree {
+  font-weight: bold;
+}
+institution {
+  transition: color 0.2s;
+}
+.work institution {
+  color: #853EF3;
+}
+.education institution {
+  color: #23CB89;
+}
+.achievements institution {
+  color: orange;
+}
+i {
+  color: #23CB89;
+}
+graduation-date {
+  margin-right: 20px;
+}
+section {
+  margin: 20px 0 40px;
+}
+@media only screen and (max-width: 800px) {
+  graduation-date {
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  gpa {
+    display: block;
+  }
+}

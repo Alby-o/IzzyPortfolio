@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.WebUtilities;
+using Portfolio.Client.Code;
 using Portfolio.Shared.Entities;
 
 namespace Portfolio.Client.Pages
@@ -43,7 +44,7 @@ namespace Portfolio.Client.Pages
             {
                 if (Work == null) return "";
 
-                return Work.StartDate.ToString("MMM yyyy");
+                return Work.StartDate.ToMonthYearString();
             }
         }
 
@@ -53,7 +54,7 @@ namespace Portfolio.Client.Pages
             {
                 if (Work?.EndDate == null) return "Present";
 
-                return Work.EndDate.Value.ToString("MMM yyyy");
+                return Work.EndDate.Value.ToMonthYearString();
             }
         }
     }

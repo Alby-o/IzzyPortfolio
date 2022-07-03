@@ -38,5 +38,9 @@
   {
     "outputFile": "Components/ProjectList.razor.css",
     "inputFile": "Components/ProjectList.razor.less"
+  },
+  {
+    "outputFile": "Pages/EducationPage.razor.css",
+    "inputFile": "Pages/EducationPage.razor.less"
   }
 ]
