@@ -1,4 +1,8 @@
-﻿name {
+﻿awards-page {
+  max-width: 1300px;
+  display: block;
+}
+name {
   font-weight: bold;
 }
 event {
