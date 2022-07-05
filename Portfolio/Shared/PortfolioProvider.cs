@@ -33,7 +33,7 @@ namespace Portfolio.Shared
                     Name = "Design Award Winner",
                     Event = "UQCS Hackathon",
                     Date = new DateOnly(2019, 8, 1),
-                    Description = "Created a 2D platforming game called Moonrisers in Unity. The game utilises Unity's block physics system to race to the moon, while trying to escape the deathly goo below them. The first to the spaceship has the choice to help their friends or leave them for dead."
+                    Description = "Created a 2D platforming game called Moonrisers in Unity. The game utilizes Unity's block physics system to race to the moon, while trying to escape the deathly goo below them. The first to the spaceship has the choice to help their friends or leave them for dead."
                 }
             },
             EducationHistory = new List<Education>
@@ -46,9 +46,9 @@ namespace Portfolio.Shared
                     GraduationDate = new DateOnly(2021, 7, 1),
                     Achievements = new List<string>
                     {
-                        "Graduated with First Class Honours.",
+                        "Graduated with First Class Honours majoring in Software Engineering.",
                         "Featured in the 2019 Innovation Showcase for Excellence in Design.",
-                        "Awarded dean’s commendations for academic excellence on six occassions.",
+                        "Awarded dean’s commendations for academic excellence on six occasions.",
                         "Received the ENGG1200 Engineering Design Award 2016 for innovation and excellence in a first-year engineering project."
                     }
                 }
@@ -148,7 +148,7 @@ namespace Portfolio.Shared
                     Responsibilities = new List<string>
                     {
                         "Conducted practicals and tutorials in Software Engineering classes - motivating and guiding students to achieve excellence.",
-                        "Taught introduction to web design, teaching students human-centred techniques to design and develop websites in HTML, CSS and JavaScript.",
+                        "Taught introduction to web design, teaching students human-centered techniques to design and develop websites in HTML, CSS and JavaScript.",
                         "Taught programming in the large, teaching students to employ techniques in Java to help support good practice, follow documentation and learn object-oriented programming.",
                         "Taught design studio two, where students worked in large classes to make a game using professional tools and processes such as git, SonarQube, JaCoCo, Jenkins, and Kanban.",
                     },
