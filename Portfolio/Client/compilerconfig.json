@@ -4,10 +4,6 @@
     "inputFile": "Styles/app.less"
   },
   {
-    "outputFile": "Components/StylizedPunctuation.razor.css",
-    "inputFile": "Components/StylizedPunctuation.razor.less"
-  },
-  {
     "outputFile": "Shared/MainLayout.razor.css",
     "inputFile": "Shared/MainLayout.razor.less"
   },
@@ -18,33 +14,5 @@
   {
     "outputFile": "Pages/Index.razor.css",
     "inputFile": "Pages/Index.razor.less"
-  },
-  {
-    "outputFile": "Components/Button.razor.css",
-    "inputFile": "Components/Button.razor.less"
-  },
-  {
-    "outputFile": "Pages/WorkPage.razor.css",
-    "inputFile": "Pages/WorkPage.razor.less"
-  },
-  {
-    "outputFile": "Components/Company.razor.css",
-    "inputFile": "Components/Company.razor.less"
-  },
-  {
-    "outputFile": "Components/TechStack.razor.css",
-    "inputFile": "Components/TechStack.razor.less"
-  },
-  {
-    "outputFile": "Components/ProjectList.razor.css",
-    "inputFile": "Components/ProjectList.razor.less"
-  },
-  {
-    "outputFile": "Pages/EducationPage.razor.css",
-    "inputFile": "Pages/EducationPage.razor.less"
-  },
-  {
-    "outputFile": "Pages/AwardsPage.razor.css",
-    "inputFile": "Pages/AwardsPage.razor.less"
   }
 ]

@@ -1,12 +1,7 @@
 ﻿<nav class="@(Open ? "open" : "closed")">
     @foreach (var item in MenuItems)
     {
-        <NavLink Match="NavLinkMatch.Prefix"
-             href="@item.Url"
-             @onmouseover=@(() => SetTheme(item.Theme))
-             @onmouseout=@(() => SetTheme(null))
-             @ontouchstart=@(() => SetTheme(item.Theme))
-             @ontouchend=@(() => SetTheme(null))>
+        <NavLink Match="NavLinkMatch.Prefix" href="@item.Url">
             <nav-item>@item.Name</nav-item>
         </NavLink>
     }

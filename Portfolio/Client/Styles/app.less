@@ -18,8 +18,8 @@ div#app {
 }
 
 body {
-    color: @darkText;
-    background-color: white;
+    color: @featureColor;
+    background-color: @backgroundColor;
     font-family: @biennaleFontName, Roboto, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -61,42 +61,6 @@ p {
     line-height: 27px;
 }
 
-ul {
-    list-style: none;
-
-    li {
-        display: flex;
-        align-items: flex-start;
-        font-size: 20px;
-        margin: 10px 0;
-
-        &::before {
-            @size: 15px;
-            content: "";
-            display: inline-block;
-            min-height: @size;
-            min-width: @size;
-            margin-right: 20px;
-            margin-top: (@size / 3) + 2.5px;
-            margin-left: (@size / 3);
-
-            .work & {
-                border-radius: 50%;
-                background: @workTheme;
-                .box-shadow(@workTheme, (@size / 3));
-            }
-
-            .education & {
-                background: @educationTheme;
-                .box-shadow(@educationTheme, (@size / 3));
-            }
-
-            .achievements & {
-
-            }
-        }
-    }
-}
 
 #blazor-error-ui {
     display: none;

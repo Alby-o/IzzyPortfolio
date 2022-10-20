@@ -7,17 +7,14 @@
             new MenuItem() {
                 Url = "/work", 
                 Name = "Work",
-                Theme = Theme.Work,
             },
             new MenuItem() {
                 Url = "/education", 
                 Name = "Education",
-                Theme = Theme.Education,
             },
             new MenuItem() {
                 Url = "/awards",
                 Name = "Awards",
-                Theme = Theme.Achievements,
             },
         };
     }

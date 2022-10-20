@@ -1,24 +1,22 @@
 ﻿@using Portfolio.Shared
 @inherits LayoutComponentBase
 
-<CascadingValue Value="Portfolio">
-    <CascadingValue Value="Theme">
-        <div class="page @Theme?.ToString()?.ToLower()">
-            <header>
-                <a href="/">
-                    <h1 tabindex=""><StylizedPunctuation Text="@(Portfolio.Name + ".")" /></h1>
-                    <selected-nav-item class="@(menuOpen ? "open" : "closed")">
-                        @(selected?.Name?? "...")
-                    </selected-nav-item>
-                </a>
-            </header>
+<div>
+    <CascadingValue Value="Portfolio">
+        <header>
+            <a href="/">
+                <h1 tabindex=""><img src="/images/Izzy Bodell Header.png" alt="Izzy Bodell" /></h1>
+            </a>
+        </header>
 
-            <Menu @bind-Theme="menuHoverTheme" Open="menuOpen" MenuItems="MenuItems" />
-
-            <main>
-                @Body
-            </main>
-        </div>
+        <aside>
+            <nav>
+                TODO: Nav
+            </nav>
+        </aside>
+        <main>
+            @Body
+        </main>
     </CascadingValue>
-</CascadingValue>
+</div>
 

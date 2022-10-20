@@ -8,13 +8,5 @@ namespace Portfolio.Client.Shared
     {
         [Parameter] public bool Open { get; set; }
         [Parameter] public List<MenuItem> MenuItems { get; set; } = new();
-
-        [Parameter] public Theme? Theme { get; set; }
-        [Parameter] public EventCallback<Theme?> ThemeChanged { get; set; }
-
-        private async Task SetTheme(Theme? theme)
-        {
-            await ThemeChanged.InvokeAsync(theme);
-        }
     }
 }
