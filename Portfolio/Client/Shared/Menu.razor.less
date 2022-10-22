@@ -36,10 +36,12 @@ works {
 
     ::deep {
         a {
+            @background-clip: text, border-box;
             padding: 5px 20px;
             background-size: 200% 100%;
             background-image: linear-gradient(to right, @orangeFeatureColor 50%, transparent 50%), linear-gradient(to right, transparent 50%, @orangeFeatureColor 50%);
-            background-clip: text, border-box;
+            background-clip: @background-clip;
+            -webkit-background-clip: @background-clip;
             color: @featureColor;
 
             &:hover {
@@ -54,11 +56,22 @@ works {
 social-media {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     font-weight: bold;
+    color: @featureColor;
 
     ::deep {
-        a:hover {
-            color: @orangeFeatureColor;
+        a {
+            @background-clip: text;
+            background-size: 200% 100%;
+            background-image: linear-gradient(to right, @featureColor 50%, @orangeFeatureColor 50%);
+            background-clip: @background-clip;
+            -webkit-background-clip: @background-clip;
+            color: transparent;
+
+            &:hover {
+                background-position: -100% 0;
+            }
         }
     }
 }

@@ -1,21 +1,36 @@
 ﻿nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 28px;
   margin-left: 50px;
 }
 nav ::deep a {
+  -webkit-transition: background-position 0.2s, color 0.2s;
   transition: background-position 0.2s, color 0.2s;
   display: inline-block;
 }
 works {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   font-weight: normal;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   border-left: 1px solid #2571E9;
   padding: 20px 10px;
 }
@@ -28,8 +43,10 @@ works::before {
 works ::deep a {
   padding: 5px 20px;
   background-size: 200% 100%;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #FF8E3B), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, #FF8E3B));
   background-image: linear-gradient(to right, #FF8E3B 50%, transparent 50%), linear-gradient(to right, transparent 50%, #FF8E3B 50%);
   background-clip: text, border-box;
+  -webkit-background-clip: text, border-box;
   color: #2571E9;
 }
 works ::deep a:hover {
@@ -37,10 +54,27 @@ works ::deep a:hover {
   color: white;
 }
 social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-weight: bold;
+  color: #2571E9;
+}
+social-media ::deep a {
+  background-size: 200% 100%;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #2571E9), color-stop(50%, #FF8E3B));
+  background-image: linear-gradient(to right, #2571E9 50%, #FF8E3B 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 social-media ::deep a:hover {
-  color: #FF8E3B;
+  background-position: -100% 0;
 }

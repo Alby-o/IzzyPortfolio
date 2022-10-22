@@ -1,7 +1,7 @@
 {
   "compilers": {
     "less": {
-      "autoPrefix": "",
+      "autoPrefix": "last 2 versions",
       "cssComb": "none",
       "ieCompat": true,
       "math": null,
