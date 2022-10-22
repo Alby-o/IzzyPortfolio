@@ -1,14 +1,16 @@
 ﻿<nav class="@(Open ? "open" : "closed")">
-    @foreach (var workItem in Works)
-    {
-        var url = WorkHelper.GetWorkItemUrl(workItem);
-        if (!string.IsNullOrWhiteSpace(url))
+    <works>
+        @foreach (var workItem in Works)
         {
-            <NavLink Match="NavLinkMatch.Prefix" href="@(url)">
-                <nav-item>@workItem.Name</nav-item>
-            </NavLink>
+            var url = WorkHelper.GetWorkItemUrl(workItem);
+            if (!string.IsNullOrWhiteSpace(url))
+            {
+                <NavLink Match="NavLinkMatch.Prefix" href="@(url)">
+                    <nav-item>@workItem.Name</nav-item>
+                </NavLink>
+            }
         }
-    }
+    </works>
 
     <social-media>
         @foreach (var item in MenuItems)

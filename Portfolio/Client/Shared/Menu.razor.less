@@ -1,1 +1,64 @@
 ﻿@import (reference) ".././Styles/common.less";
+
+@transitionDuration: 0.2s;
+
+nav {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 28px;
+    margin-left: 50px;
+
+    ::deep {
+        a {
+            transition: background-position @transitionDuration, color @transitionDuration;
+            display: inline-block;
+        }
+    }
+}
+
+works {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-weight: normal;
+    align-items: flex-start;
+    border-left: 1px solid @featureColor;
+    padding: 20px 10px;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+    }
+
+    ::deep {
+        a {
+            padding: 5px 20px;
+            background-size: 200% 100%;
+            background-image: linear-gradient(to right, @orangeFeatureColor 50%, transparent 50%), linear-gradient(to right, transparent 50%, @orangeFeatureColor 50%);
+            background-clip: text, border-box;
+            color: @featureColor;
+
+            &:hover {
+                background-position: -100% 0;
+                color: white;
+            }
+        }
+    }
+}
+
+
+social-media {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+
+    ::deep {
+        a:hover {
+            color: @orangeFeatureColor;
+        }
+    }
+}

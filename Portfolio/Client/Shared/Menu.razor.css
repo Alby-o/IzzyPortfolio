@@ -1,1 +1,46 @@
-﻿
+﻿nav {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 28px;
+  margin-left: 50px;
+}
+nav ::deep a {
+  transition: background-position 0.2s, color 0.2s;
+  display: inline-block;
+}
+works {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-weight: normal;
+  align-items: flex-start;
+  border-left: 1px solid #2571E9;
+  padding: 20px 10px;
+}
+works::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+}
+works ::deep a {
+  padding: 5px 20px;
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, #FF8E3B 50%, transparent 50%), linear-gradient(to right, transparent 50%, #FF8E3B 50%);
+  background-clip: text, border-box;
+  color: #2571E9;
+}
+works ::deep a:hover {
+  background-position: -100% 0;
+  color: white;
+}
+social-media {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+social-media ::deep a:hover {
+  color: #FF8E3B;
+}
