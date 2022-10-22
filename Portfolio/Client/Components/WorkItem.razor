@@ -1,0 +1,12 @@
+﻿<a href="@WorkHelper.GetWorkItemUrl(Work)" style="@(Style)">
+    <work-item>
+        <label>@Work.Name</label>
+        <year>@Work.Date.ToYearString()</year>
+    </work-item>
+</a>
+
+@code {
+    [Parameter, EditorRequired] public Work Work { get; set; } = default!;
+
+    public string Style => $"background-image: url(\"{WorkHelper.GetWorkImageUrl(Work)}\")";
+}

@@ -1,2 +1,10 @@
 ﻿@import (reference) "../Styles/common.less";
 
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @spacing: 80px;
+    gap: @spacing;
+    margin-right: @spacing;
+    margin-bottom: @spacing;
+}

@@ -1,0 +1,56 @@
+﻿@import (reference) "../Styles/common.less";
+
+@transitionDuration: 0.2s;
+
+a {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 38px;
+    aspect-ratio: 16/9;
+    border: 4px solid @backgroundColor;
+    transition: border-color @transitionDuration;
+    position: relative;
+    overflow: hidden;
+
+
+    &:hover {
+        border-color: @featureColor;
+
+        work-item {
+            opacity: 1;
+        }
+
+        label {
+            .background-slide-hover();
+        }
+    }
+}
+
+work-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FFFFFFB9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: opacity @transitionDuration;
+    opacity: 0;
+}
+
+label {
+    cursor: pointer;
+    font-size: 28px;
+    display: block;
+    padding: 5px 20px;
+    .background-slide();
+}
+
+year {
+    font-size: 22px;
+    margin-top: 5px;
+}

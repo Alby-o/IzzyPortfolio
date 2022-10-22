@@ -20,3 +20,41 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
 @mobile: ~"only screen and (max-width: @{mobileSize})";
 @tablet: ~"only screen and (max-width: @{tabletSize})";
 @small-desktop: ~"only screen and (max-width: @{smallDesktopSize})";
+
+
+.background-slide(@color: @featureColor, @backgroundColor: transparent, @hoverColor: white, @hoverBackgroundColor: @orangeFeatureColor, @transitionDuration: 0.2s) {
+    @background-clip: text, border-box;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, @hoverBackgroundColor 50%, @backgroundColor 50%), linear-gradient(to right, @backgroundColor 50%, @hoverBackgroundColor 50%);
+    background-clip: @background-clip;
+    -webkit-background-clip: @background-clip;
+    color: @color;
+    transition: background-position @transitionDuration, color @transitionDuration;
+
+    &:hover {
+        .background-slide-hover(@hoverColor);
+    }
+}
+
+.background-slide-hover(@hoverColor: white) {
+    .text-slide-hover();
+    color: @hoverColor;
+}
+
+.text-slide(@color: @featureColor, @hoverColor: @orangeFeatureColor, @transitionDuration: 0.2s) {
+    @background-clip: text;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, @color 50%, @hoverColor 50%);
+    background-clip: @background-clip;
+    -webkit-background-clip: @background-clip;
+    color: transparent;
+    transition: background-position @transitionDuration;
+
+    &:hover {
+        .text-slide-hover();
+    }
+}
+
+.text-slide-hover() {
+    background-position: -100% 0;
+}

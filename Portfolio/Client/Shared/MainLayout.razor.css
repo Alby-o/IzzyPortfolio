@@ -9,3 +9,8 @@ menu {
 header a {
   max-width: 1050px;
 }
+section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}

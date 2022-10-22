@@ -1,4 +1,5 @@
 ﻿nav {
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,8 +15,6 @@
   margin-left: 50px;
 }
 nav ::deep a {
-  -webkit-transition: background-position 0.2s, color 0.2s;
-  transition: background-position 0.2s, color 0.2s;
   display: inline-block;
 }
 works {
@@ -48,6 +47,8 @@ works ::deep a {
   background-clip: text, border-box;
   -webkit-background-clip: text, border-box;
   color: #2571E9;
+  -webkit-transition: background-position 0.2s, color 0.2s;
+  transition: background-position 0.2s, color 0.2s;
 }
 works ::deep a:hover {
   background-position: -100% 0;
@@ -65,15 +66,19 @@ social-media {
       -ms-flex-align: start;
           align-items: flex-start;
   font-weight: bold;
+  margin-top: 10px;
   color: #2571E9;
 }
 social-media ::deep a {
+  margin: 5px 0;
   background-size: 200% 100%;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #2571E9), color-stop(50%, #FF8E3B));
   background-image: linear-gradient(to right, #2571E9 50%, #FF8E3B 50%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  -webkit-transition: background-position 0.2s;
+  transition: background-position 0.2s;
 }
 social-media ::deep a:hover {
   background-position: -100% 0;

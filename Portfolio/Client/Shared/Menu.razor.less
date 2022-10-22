@@ -3,6 +3,7 @@
 @transitionDuration: 0.2s;
 
 nav {
+    position: fixed;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -12,7 +13,6 @@ nav {
 
     ::deep {
         a {
-            transition: background-position @transitionDuration, color @transitionDuration;
             display: inline-block;
         }
     }
@@ -36,18 +36,8 @@ works {
 
     ::deep {
         a {
-            @background-clip: text, border-box;
             padding: 5px 20px;
-            background-size: 200% 100%;
-            background-image: linear-gradient(to right, @orangeFeatureColor 50%, transparent 50%), linear-gradient(to right, transparent 50%, @orangeFeatureColor 50%);
-            background-clip: @background-clip;
-            -webkit-background-clip: @background-clip;
-            color: @featureColor;
-
-            &:hover {
-                background-position: -100% 0;
-                color: white;
-            }
+            .background-slide();
         }
     }
 }
@@ -58,20 +48,13 @@ social-media {
     flex-direction: column;
     align-items: flex-start;
     font-weight: bold;
+    margin-top: 10px;
     color: @featureColor;
 
     ::deep {
         a {
-            @background-clip: text;
-            background-size: 200% 100%;
-            background-image: linear-gradient(to right, @featureColor 50%, @orangeFeatureColor 50%);
-            background-clip: @background-clip;
-            -webkit-background-clip: @background-clip;
-            color: transparent;
-
-            &:hover {
-                background-position: -100% 0;
-            }
+            margin: 5px 0;
+            .text-slide();
         }
     }
 }

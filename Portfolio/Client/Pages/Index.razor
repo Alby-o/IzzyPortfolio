@@ -4,6 +4,13 @@
 
 <PageTitle>@Portfolio.Name</PageTitle>
 
+<section>
+    @foreach (var work in Portfolio.Works)
+    {
+        <WorkItem Work="work" />
+    }
+</section>
+
 
 @code {
     [CascadingParameter] public SitePortfolio Portfolio { get; set; } = default!;
