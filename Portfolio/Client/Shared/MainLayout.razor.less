@@ -5,15 +5,46 @@ div {
 }
 
 menu {
-    min-width: 450px;
+    min-width: @menuWidth;
 }
 
 header {
     a {
+        display: block;
         max-width: 1050px;
+        padding: 0 @pageSpacing;
     }
 }
 
 section {
     flex: 1;
+}
+
+overlay {
+    .overlay {
+        position: fixed;
+        z-index: 1;
+        max-width: 15%;
+    }
+
+    .overlay-1 {
+        top: 0;
+        left: 0;
+    }
+
+    .overlay-2 {
+        top: 0;
+        right: 0;
+    }
+
+    .overlay-3 {
+        top: 5%;
+        left: calc(@menuWidth - 7.5%);
+    }
+
+    .overlay-4 {
+        max-width: 20%;
+        bottom: 0;
+        left: calc(@menuWidth - 15%);
+    }
 }
