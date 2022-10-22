@@ -5,16 +5,13 @@
         public static readonly List<MenuItem> MenuItems = new()
         {
             new MenuItem() {
-                Url = "/work", 
-                Name = "Work",
+                Url = "/about", 
+                Name = "About",
             },
             new MenuItem() {
-                Url = "/education", 
-                Name = "Education",
-            },
-            new MenuItem() {
-                Url = "/awards",
-                Name = "Awards",
+                Url = "https://www.instagram.com/izzybodell/", 
+                Name = "Instagram",
+                IsExternalLink = true
             },
         };
     }

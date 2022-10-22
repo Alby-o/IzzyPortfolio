@@ -1,0 +1,26 @@
+﻿@page "/work/{Name}"
+
+@if (work != null)
+{
+    <h2>@work.Name</h2>
+    <img  src="@WorkHelper.GetWorkImageUrl(work)"/>
+}
+else
+{
+    <h2>Page not found :(</h2>
+}
+
+
+@code {
+    [Parameter] public string Name { get; set; } = "";
+
+    private Work? work;
+
+    protected override void OnParametersSet()
+    {
+        if (!string.IsNullOrEmpty(Name))
+        {
+            work = WorkHelper.GetWorkItem(Name);
+        }
+    }
+}
