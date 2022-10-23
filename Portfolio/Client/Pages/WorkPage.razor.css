@@ -67,15 +67,44 @@ h2 {
     font-size: 26px;
   }
 }
-p {
-  font-size: 28px;
-  width: 70%;
-  margin-top: 20px;
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+section a {
+  border: 2px solid #2571E9;
+  color: #2571E9;
+  padding: 5px 10px;
+  margin: 20px;
 }
 @media only screen and (max-width: 800px) {
-  p {
-    font-size: 18px;
+  section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
+  section a {
+    margin: 20px 0;
+  }
+}
+description {
+  display: block;
+  width: 70%;
+  font-size: 28px;
+}
+@media only screen and (max-width: 800px) {
+  description {
+    font-size: 18px;
+    width: 100%;
+  }
+}
+p {
+  margin-top: 20px;
 }
 images {
   display: grid;

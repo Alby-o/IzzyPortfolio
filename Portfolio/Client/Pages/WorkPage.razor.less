@@ -52,14 +52,40 @@ h2 {
     }
 }
 
-p {
-    font-size: 28px;
+section {
+    display: flex;
+    align-items: flex-start;
+
+    a {
+        border: 2px solid @featureColor;
+        color: @featureColor;
+        padding: 5px 10px;
+        margin: 20px;
+    }
+
+    @media @mobile {
+        flex-direction: column;
+
+        a {
+            margin: 20px 0;
+        }
+    }
+}
+
+description {
+    display: block;
     width: 70%;
-    margin-top: 20px;
+    font-size: 28px;
+
 
     @media @mobile {
         font-size: 18px;
+        width: 100%;
     }
+}
+
+p {
+    margin-top: 20px;
 }
 
 @spacing: 50px;

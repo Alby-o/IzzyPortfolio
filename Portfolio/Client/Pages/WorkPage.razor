@@ -7,10 +7,18 @@
             <h2>@work.Name - @work.Date.ToYearString()</h2>
             <a href="/"><i class="fa-regular fa-x"></i></a>
         </header>
-        @foreach (var paragraph in work.Description.Split('\n'))
-        {
-            <p>@paragraph</p>
-        }
+        <section>
+            <description>
+                @foreach (var paragraph in work.Description.Split('\n'))
+                {
+                    <p>@paragraph</p>
+                }
+            </description>
+            @if (!string.IsNullOrEmpty(work.File))
+            {
+                <a href="@work.File" target="_blank">@work.File.ToUpper() <i class="fa-solid fa-up-right-from-square"></i></a>
+            }
+        </section>
         <images>
             @foreach (var imageSet in work.ImageSets)
             {
