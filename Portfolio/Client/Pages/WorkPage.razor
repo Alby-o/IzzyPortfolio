@@ -7,7 +7,10 @@
             <h2>@work.Name - @work.Date.ToYearString()</h2>
             <a href="/"><i class="fa-regular fa-x"></i></a>
         </header>
-        <p>@work.Description</p>
+        @foreach (var paragraph in work.Description.Split('\n'))
+        {
+            <p>@paragraph</p>
+        }
         <images>
             @foreach (var imageSet in work.ImageSets)
             {

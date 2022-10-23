@@ -24,6 +24,15 @@ namespace Portfolio.Shared.Entities
                 Alt = alt
             });
         }
+        public ImageSet(string imageName, string alt, bool rounded)
+        {
+            Images.Add(new Image
+            {
+                Name = imageName,
+                Alt = alt,
+                Rounded = rounded
+            });
+        }
 
         public ImageSet(IList<Image> images)
         {
