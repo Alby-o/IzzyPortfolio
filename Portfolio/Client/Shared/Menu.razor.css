@@ -70,8 +70,8 @@ works ::deep a {
   background-clip: text, border-box;
   -webkit-background-clip: text, border-box;
   color: #2571E9;
-  -webkit-transition: background-position 0.2s, color 0.2s;
-  transition: background-position 0.2s, color 0.2s;
+  -webkit-transition: background-position 0.4s, color 0.4s;
+  transition: background-position 0.4s, color 0.4s;
 }
 works ::deep a.active,
 works ::deep a:hover {
@@ -114,8 +114,8 @@ social-media ::deep a {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  -webkit-transition: background-position 0.2s;
-  transition: background-position 0.2s;
+  -webkit-transition: background-position 0.4s;
+  transition: background-position 0.4s;
 }
 social-media ::deep a.active,
 social-media ::deep a:hover {

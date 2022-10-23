@@ -30,6 +30,7 @@ div#app {
           flex: 1;
 }
 body {
+  overflow-y: scroll;
   color: #2571E9;
   background-color: #F4F4F4;
   font-family: "Biennale", Roboto, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

@@ -24,17 +24,13 @@ menu {
 
 header {
     order: 0;
-    .dynamic-spacing(margin-right);
+    .dynamic-spacing(margin-right, @mobileSpacing: 0);
 
     a {
         display: block;
         max-width: 1050px;
         padding: 0 20px;
         margin: auto;
-    }
-
-    @media @mobile {
-        margin-right: 0;
     }
 }
 
@@ -53,7 +49,7 @@ main {
 overlay {
     .overlay {
         position: fixed;
-        z-index: 1;
+        z-index: @overlayZIndex;
         max-width: 15%;
         pointer-events: none;
 

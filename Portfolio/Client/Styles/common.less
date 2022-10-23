@@ -7,9 +7,12 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
 */
 
 @backgroundColor: #F4F4F4;
+@whiteBackgroundColor: #FAFAFA;
 @featureColor: #2571E9;
 @orangeFeatureColor: #FF8E3B;
 @danger: #E60200;
+@textColor: black;
+@fadedTextColor: #CBCBCB;
 
 @pageSpacing: 80px;
 @pageSpacingDesktop: 80px;
@@ -17,6 +20,8 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
 @pageSpacingMobile: 20px;
 @menuWidth: 450px;
 @menuWidthTablet: 320px;
+
+@overlayZIndex: 1;
 
 @smallDesktopSize: 1550px;
 @tabletSize: 1100px;
@@ -28,19 +33,19 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
 @tablet: ~"only screen and (max-width: @{tabletSize})";
 @small-desktop: ~"only screen and (max-width: @{smallDesktopSize})";
 
-.dynamic-spacing(@property) {
-    @{property}: @pageSpacingDesktop;
+.dynamic-spacing(@property, @desktopSpacing: @pageSpacingDesktop, @tabletSpacing: @pageSpacingTablet, @mobileSpacing: @pageSpacingMobile) {
+    @{property}: @desktopSpacing;
 
     @media @small-desktop {
-        @{property}: @pageSpacingTablet;
+        @{property}: @tabletSpacing;
     }
 
     @media @mobile {
-        @{property}: @pageSpacingMobile;
+        @{property}: @mobileSpacing;
     }
 }
 
-.background-slide(@color: @featureColor, @backgroundColor: transparent, @hoverColor: white, @hoverBackgroundColor: @orangeFeatureColor, @transitionDuration: 0.2s) {
+.background-slide(@color: @featureColor, @backgroundColor: transparent, @hoverColor: white, @hoverBackgroundColor: @orangeFeatureColor, @transitionDuration: 0.4s) {
     .background-slide-base(@color, @backgroundColor, @hoverColor, @hoverBackgroundColor, @transitionDuration);
 
     &:hover {
@@ -48,7 +53,7 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
     }
 }
 
-.background-slide-base(@color: @featureColor, @backgroundColor: transparent, @hoverColor: white, @hoverBackgroundColor: @orangeFeatureColor, @transitionDuration: 0.2s) {
+.background-slide-base(@color: @featureColor, @backgroundColor: transparent, @hoverColor: white, @hoverBackgroundColor: @orangeFeatureColor, @transitionDuration: 0.4s) {
     @background-clip: text, border-box;
     background-size: 200% 100%;
     background-image: linear-gradient(to right, @hoverBackgroundColor 50%, @backgroundColor 50%), linear-gradient(to right, @backgroundColor 50%, @hoverBackgroundColor 50%);
@@ -63,7 +68,7 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
     color: @hoverColor;
 }
 
-.text-slide(@color: @featureColor, @hoverColor: @orangeFeatureColor, @transitionDuration: 0.2s) {
+.text-slide(@color: @featureColor, @hoverColor: @orangeFeatureColor, @transitionDuration: 0.4s) {
     .text-slide-base(@color, @hoverColor, @transitionDuration);
 
     &:hover {
@@ -71,7 +76,7 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
     }
 }
 
-.text-slide-base(@color: @featureColor, @hoverColor: @orangeFeatureColor, @transitionDuration: 0.2s) {
+.text-slide-base(@color: @featureColor, @hoverColor: @orangeFeatureColor, @transitionDuration: 0.4s) {
     @background-clip: text;
     background-size: 200% 100%;
     background-image: linear-gradient(to right, @color 50%, @hoverColor 50%);

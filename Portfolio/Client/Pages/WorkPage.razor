@@ -1,14 +1,19 @@
 ﻿@page "/work/{Name}"
 
-@if (work != null)
-{
-    <h2>@work.Name</h2>
-    <img  src="@WorkHelper.GetWorkImageUrl(work)"/>
-}
-else
-{
-    <h2>Page not found :(</h2>
-}
+<work-page>
+    @if (work != null)
+    {
+        <header>
+            <h2>@work.Name - @work.Date.ToYearString()</h2>
+            <a href="/"><i class="fa-regular fa-x"></i></a>
+        </header>
+        <p>@work.Description</p>
+    }
+    else
+    {
+        <h2>Page not found :(</h2>
+    }
+</work-page>
 
 
 @code {

@@ -3,17 +3,11 @@
 section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    .dynamic-spacing(gap);
-    .dynamic-spacing(margin-right);
-    .dynamic-spacing(margin-bottom);
+    .dynamic-spacing(gap, @mobileSpacing: 50px);
+    .dynamic-spacing(margin-right, @mobileSpacing: 0);
+    .dynamic-spacing(margin-bottom, @mobileSpacing: 0);
 
     @media @tablet {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    @media @mobile {
-        margin-right: 0;
-        margin-bottom: 0;
-        gap: 40px;
     }
 }

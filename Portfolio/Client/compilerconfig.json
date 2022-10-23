@@ -18,5 +18,9 @@
   {
     "outputFile": "Components/WorkItem.razor.css",
     "inputFile": "Components/WorkItem.razor.less"
+  },
+  {
+    "outputFile": "Pages/WorkPage.razor.css",
+    "inputFile": "Pages/WorkPage.razor.less"
   }
 ]

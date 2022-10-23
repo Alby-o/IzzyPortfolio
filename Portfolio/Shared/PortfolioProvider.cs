@@ -20,45 +20,45 @@ namespace Portfolio.Shared
                 new Work()
                 {
                     Name = "A Fairy Story",
-                    Description = "",
+                    Description = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.",
                     Date = new DateOnly(2022, 1, 1),
                     Image = "A Fairy Story.jpg"
                 },
                 new Work()
                 {
                     Name = "Juno and Calio",
-                    Description = "",
+                    Description = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.",
                     Date = new DateOnly(2022, 1, 1)
                 },
                 new Work()
                 {
                     Name = "Evolta Batteries",
-                    Description = "",
+                    Description = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.",
                     Date = new DateOnly(2022, 1, 1)
                 },
                 new Work()
                 {
                     Name = "Various Illustrations",
-                    Description = "",
+                    Description = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.",
                     Date = new DateOnly(2022, 1, 1)
                 },
                 new Work()
                 {
                     Name = "The Lady from Weedon",
-                    Description = "",
+                    Description = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.",
                     Date = new DateOnly(2021, 1, 1),
                     Image = "Weedon.jpg"
                 },
                 new Work()
                 {
                     Name = "Crag Mag",
-                    Description = "",
+                    Description = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.",
                     Date = new DateOnly(2021, 1, 1)
                 },
                 new Work()
                 {
                     Name = "Geobeast",
-                    Description = "",
+                    Description = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.",
                     Date = new DateOnly(2019, 1, 1)
                 }
             }

@@ -61,8 +61,8 @@ label {
   background-clip: text, border-box;
   -webkit-background-clip: text, border-box;
   color: #2571E9;
-  -webkit-transition: background-position 0.2s, color 0.2s;
-  transition: background-position 0.2s, color 0.2s;
+  -webkit-transition: background-position 0.4s, color 0.4s;
+  transition: background-position 0.4s, color 0.4s;
 }
 label:hover {
   background-position: -100% 0;
