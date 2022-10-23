@@ -8,6 +8,17 @@
             <a href="/"><i class="fa-regular fa-x"></i></a>
         </header>
         <p>@work.Description</p>
+        <images>
+            @foreach (var imageSet in work.ImageSets)
+            {
+                <image-set style="@($"--image-count: {imageSet.Images.Count}")">
+                    @foreach (var image in imageSet.Images)
+                    {
+                        <img class="@(image.Rounded ? "rounded" : "")"  src="@(WorkHelper.GetWorkImageUrl(work, image.Name))" alt="@image.Alt" />
+                    }
+                </image-set>
+            }
+        </images>
     }
     else
     {

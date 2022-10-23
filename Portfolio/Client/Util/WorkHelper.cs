@@ -27,11 +27,11 @@ public static class WorkHelper
         return null;
     }
 
-    public static string GetWorkImageUrl(Work work)
+    public static string GetWorkImageUrl(Work work, string? image = null)
     {
         // Resort to default image name {name}.png if a custom image name is not provided
-        var imageName = work.Image ?? $"{work.Name}.png";
-        return $"/images/{imageName}";
+        var imageName = image ?? work.Image ?? $"{work.Name}.png";
+        return $"/images/{work.Name}/{imageName}";
     }
 
     public static string? GetWorkItemUrl(Work item)

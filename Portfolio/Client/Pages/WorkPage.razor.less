@@ -8,6 +8,10 @@ work-page {
     .dynamic-spacing(padding);
     color: @textColor;
     min-height: 100vh;
+
+    @media @mobile {
+        left: 0;
+    }
 }
 
 header {
@@ -17,13 +21,13 @@ header {
 
     a {
         flex-shrink: 0;
-        @size: 75px;
+        @size: 60px;
         height: @size;
         width: @size;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 60px;
+        font-size: 40px;
         color: @fadedTextColor;
         border: 3px solid transparent;
         border-radius: 50%;
@@ -42,9 +46,41 @@ header {
 h2 {
     font-weight: 600;
     font-size: 45px;
+
+    @media @mobile {
+        font-size: 26px;
+    }
 }
 
 p {
     font-size: 28px;
     width: 70%;
+
+    @media @mobile {
+        font-size: 18px;
+    }
+}
+
+@spacing: 50px;
+
+images {
+    display: grid;
+    gap: @spacing;
+    margin-top: @spacing;
+}
+
+image-set {
+    display: grid;
+    gap: @spacing;
+    align-items: center;
+    grid-template-columns: repeat(var(--image-count, 1), 1fr);
+}
+
+img {
+    display: block;
+    flex: 1;
+
+    &.rounded {
+        border-radius: 30px;
+    }
 }

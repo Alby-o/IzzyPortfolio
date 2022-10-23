@@ -28,7 +28,27 @@ namespace Portfolio.Shared
                 {
                     Name = "Juno and Calio",
                     Description = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.",
-                    Date = new DateOnly(2022, 1, 1)
+                    Date = new DateOnly(2022, 1, 1),
+                    ImageSets = new List<ImageSet>()
+                    {
+                        new ImageSet("Juno and Calio.png", "Juno and Calio"),
+                        new ImageSet("Town Street w Background Characters.png", "Town Street w Background Characters"),
+                        new ImageSet(new List<Image>
+                        {
+                            new Image()
+                            {
+                                Name = "Map Transparent.png",
+                                Alt = "Map",
+                                Rounded = false,
+                            },
+                            new Image()
+                            {
+                                Name = "Dancing Cat.gif",
+                                Alt = "Dancing cat",
+                                Rounded = true,
+                            }
+                        })
+                    }
                 },
                 new Work()
                 {
@@ -53,7 +73,8 @@ namespace Portfolio.Shared
                 {
                     Name = "Crag Mag",
                     Description = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.",
-                    Date = new DateOnly(2021, 1, 1)
+                    Date = new DateOnly(2021, 1, 1),
+                    Image = "Crag Mag.jpg"
                 },
                 new Work()
                 {

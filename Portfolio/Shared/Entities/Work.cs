@@ -12,5 +12,7 @@ namespace Portfolio.Shared.Entities
         public virtual string Description { get; set; } = default!;
         public virtual DateOnly Date { get; set; }
         public string? Image { get; set; }
+        public string? File { get; set; }
+        public IList<ImageSet> ImageSets { get; set; } = new List<ImageSet>();
     }
 }
