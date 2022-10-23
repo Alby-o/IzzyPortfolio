@@ -15,5 +15,5 @@
 @code {
     [Parameter, EditorRequired] public Work Work { get; set; } = default!;
 
-    public string Style => $"background-image: url(\"{WorkHelper.GetWorkImageUrl(Work)}\")";
+    public string Style => $"background-image: url(\"{WorkHelper.GetImageUrl(Work)}\")";
 }

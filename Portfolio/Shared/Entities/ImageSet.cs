@@ -9,7 +9,10 @@ namespace Portfolio.Shared.Entities
     public class ImageSet
     {
         public IList<Image> Images { get; set; } = new List<Image>();
-        public bool IsVideo { get; set; } = false;
+
+        // This is a bit lazy, but ¯\_(ツ)_/¯
+        public string? VideoName { get; set; }
+        public string? VideoPoster { get; set; }
 
         public ImageSet() { }
 

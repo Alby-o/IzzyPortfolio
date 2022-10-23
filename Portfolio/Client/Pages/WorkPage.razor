@@ -12,9 +12,19 @@
             @foreach (var imageSet in work.ImageSets)
             {
                 <image-set style="@($"--image-count: {imageSet.Images.Count}")">
-                    @foreach (var image in imageSet.Images)
+
+                    @if (!string.IsNullOrEmpty(imageSet.VideoName))
                     {
-                        <img class="@(image.Rounded ? "rounded" : "")"  src="@(WorkHelper.GetWorkImageUrl(work, image.Name))" alt="@image.Alt" />
+                        <video controls poster="@(work.GetImageUrl(imageSet.VideoPoster))">
+                            <source src="@(work.GetVideoUrl(imageSet.VideoName))" type="video/mp4" />
+                        </video>
+                    }
+                    else
+                    {
+                        @foreach (var image in imageSet.Images)
+                        {
+                            <img class="@(image.Rounded ? "rounded" : "")" src="@(work.GetImageUrl(image.Name))" alt="@image.Alt" />
+                        }
                     }
                 </image-set>
             }

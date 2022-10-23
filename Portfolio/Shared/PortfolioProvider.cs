@@ -22,7 +22,11 @@ namespace Portfolio.Shared
                     Name = "A Fairy Story",
                     Description = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.",
                     Date = new DateOnly(2022, 1, 1),
-                    Image = "A Fairy Story.jpg"
+                    Image = "A Fairy Story.jpg",
+                    ImageSets = new List<ImageSet>()
+                    {
+                        new ImageSet("A Fairy Story.jpg", "A Fairy Story")
+                    }
                 },
                 new Work()
                 {
@@ -54,7 +58,33 @@ namespace Portfolio.Shared
                 {
                     Name = "Evolta Batteries",
                     Description = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.",
-                    Date = new DateOnly(2022, 1, 1)
+                    Date = new DateOnly(2022, 1, 1),
+                    ImageSets = new List<ImageSet>()
+                    {
+                        new ImageSet("Evolta Batteries.png", "Man next to fire with speaker and battery"),
+                        new ImageSet("IMG_0992.jpg", "Close up of battery"),
+                        new ImageSet("Untitled_Artwork 3.jpg", "Aliens standing next to speaker"),
+                        new ImageSet(new List<Image>
+                        {
+                            new Image()
+                            {
+                                Name = "IMG_0894.PNG",
+                                Alt = "Storyboard",
+                                Rounded = false,
+                            },
+                            new Image()
+                            {
+                                Name = "IMG_0895.PNG",
+                                Alt = "Storyboard",
+                                Rounded = false,
+                            }
+                        }),
+                        new ImageSet()
+                        {
+                            VideoName ="Animatic_SFX_V2.mp4",
+                            VideoPoster = "poster.jpg"
+                        }
+                    }
                 },
                 new Work()
                 {
