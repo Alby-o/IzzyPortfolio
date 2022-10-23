@@ -2,7 +2,12 @@
 
 @transitionDuration: 0.2s;
 
+work-item-container {
+    display: block;
+}
+
 a {
+    display: block;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -13,16 +18,17 @@ a {
     position: relative;
     overflow: hidden;
 
+    @media @not-mobile {
+        &:hover {
+            border-color: @featureColor;
 
-    &:hover {
-        border-color: @featureColor;
+            work-item {
+                opacity: 1;
+            }
 
-        work-item {
-            opacity: 1;
-        }
-
-        label {
-            .background-slide-hover();
+            label {
+                .background-slide-hover();
+            }
         }
     }
 }
@@ -53,4 +59,20 @@ label {
 year {
     font-size: 22px;
     margin-top: 5px;
+}
+
+header {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    @media @mobile {
+        display: flex;
+    }
+
+    label {
+        font-size: 20px;
+        .background-slide-hover();
+        text-align: center;
+    }
 }

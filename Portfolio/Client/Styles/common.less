@@ -23,6 +23,7 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
 @mobileSize: 800px;
 @mobileSmallSize: 500px;
 @mobile-small: ~"only screen and (max-width: @{mobileSmallSize})";
+@not-mobile: ~"only screen and (min-width: @{mobileSize})";
 @mobile: ~"only screen and (max-width: @{mobileSize})";
 @tablet: ~"only screen and (max-width: @{tabletSize})";
 @small-desktop: ~"only screen and (max-width: @{smallDesktopSize})";

@@ -1,4 +1,8 @@
-﻿a {
+﻿work-item-container {
+  display: block;
+}
+a {
+  display: block;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -10,15 +14,17 @@
   position: relative;
   overflow: hidden;
 }
-a:hover {
-  border-color: #2571E9;
-}
-a:hover work-item {
-  opacity: 1;
-}
-a:hover label {
-  background-position: -100% 0;
-  color: white;
+@media only screen and (min-width: 800px) {
+  a:hover {
+    border-color: #2571E9;
+  }
+  a:hover work-item {
+    opacity: 1;
+  }
+  a:hover label {
+    background-position: -100% 0;
+    color: white;
+  }
 }
 work-item {
   position: absolute;
@@ -65,4 +71,27 @@ label:hover {
 year {
   font-size: 22px;
   margin-top: 5px;
+}
+header {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media only screen and (max-width: 800px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+header label {
+  font-size: 20px;
+  background-position: -100% 0;
+  color: white;
+  text-align: center;
 }
