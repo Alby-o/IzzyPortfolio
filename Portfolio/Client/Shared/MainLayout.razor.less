@@ -61,11 +61,22 @@ overlay {
     .overlay-1 {
         top: 0;
         left: 0;
+
+        @media @mobile {
+            display: block;
+            top: unset;
+            bottom: 100px;
+        }
     }
 
     .overlay-2 {
         top: 0;
         right: 0;
+
+        @media @mobile {
+            display: block;
+            top: 120px;
+        }
     }
 
     .overlay-3 {

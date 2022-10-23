@@ -80,9 +80,22 @@ overlay .overlay-1 {
   top: 0;
   left: 0;
 }
+@media only screen and (max-width: 800px) {
+  overlay .overlay-1 {
+    display: block;
+    top: unset;
+    bottom: 100px;
+  }
+}
 overlay .overlay-2 {
   top: 0;
   right: 0;
+}
+@media only screen and (max-width: 800px) {
+  overlay .overlay-2 {
+    display: block;
+    top: 120px;
+  }
 }
 overlay .overlay-3 {
   top: 5%;

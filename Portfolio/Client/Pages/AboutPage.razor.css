@@ -29,6 +29,11 @@ izzy {
     margin-top: -50px;
   }
 }
+@media only screen and (max-width: 800px) {
+  izzy {
+    margin-top: 0;
+  }
+}
 img.izzy {
   display: block;
 }
