@@ -1,0 +1,52 @@
+﻿@import (reference) "../Styles/common.less";
+
+overlay-page {
+    background: @whiteBackgroundColor;
+    position: absolute;
+    top: 0;
+    z-index: (@overlayZIndex + 1);
+    .dynamic-spacing(padding);
+    color: @textColor;
+    min-height: 100vh;
+
+    @media @mobile {
+        left: 0;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        flex-shrink: 0;
+        @size: 60px;
+        height: @size;
+        width: @size;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: @fadedTextColor;
+        border: 3px solid transparent;
+        border-radius: 50%;
+
+        @transitionDuration: 0.4s;
+        transition: color @transitionDuration, border-color @transitionDuration;
+
+        &:hover {
+            color: @featureColor;
+            border-color: @featureColor;
+        }
+    }
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 45px;
+
+    @media @mobile {
+        font-size: 26px;
+    }
+}

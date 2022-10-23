@@ -22,5 +22,13 @@
   {
     "outputFile": "Pages/WorkPage.razor.css",
     "inputFile": "Pages/WorkPage.razor.less"
+  },
+  {
+    "outputFile": "Components/OverlayPage.razor.css",
+    "inputFile": "Components/OverlayPage.razor.less"
+  },
+  {
+    "outputFile": "Pages/AboutPage.razor.css",
+    "inputFile": "Pages/AboutPage.razor.less"
   }
 ]

@@ -1,12 +1,8 @@
 ﻿@page "/work/{Name}"
 
-<work-page>
+<OverlayPage Title="@GetPageTitle()">
     @if (work != null)
     {
-        <header>
-            <h2>@work.Name - @work.Date.ToYearString()</h2>
-            <a href="/"><i class="fa-regular fa-x"></i></a>
-        </header>
         <section>
             <description>
                 @foreach (var paragraph in work.Description.Split('\n'))
@@ -45,7 +41,7 @@
     {
         <h2>Page not found :(</h2>
     }
-</work-page>
+</OverlayPage>
 
 
 @code {
@@ -59,5 +55,15 @@
         {
             work = WorkHelper.GetWorkItem(Name);
         }
+    }
+
+    private string GetPageTitle()
+    {
+        if (work == null)
+        {
+            return "Not Found";
+        }
+
+        return $"{work.Name} - {work.Date.ToYearString()}";
     }
 }

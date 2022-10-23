@@ -1,0 +1,14 @@
+﻿<PageTitle>@Title | @Portfolio.Name</PageTitle>
+<overlay-page>
+    <header>
+        <h2>@Title</h2>
+        <a href="/"><i class="fa-regular fa-x"></i></a>
+    </header>
+    @ChildContent
+</overlay-page>
+
+@code {
+    [CascadingParameter] public SitePortfolio Portfolio { get; set; } = default!;
+    [Parameter, EditorRequired] public string Title { get; set; } = default!;
+    [Parameter, EditorRequired] public RenderFragment ChildContent { get; set; } = default!;
+}
