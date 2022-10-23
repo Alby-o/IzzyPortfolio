@@ -12,7 +12,11 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
 @danger: #E60200;
 
 @pageSpacing: 80px;
+@pageSpacingDesktop: 80px;
+@pageSpacingTablet: 40px;
+@pageSpacingMobile: 20px;
 @menuWidth: 450px;
+@menuWidthTablet: 320px;
 
 @smallDesktopSize: 1550px;
 @tabletSize: 1100px;
@@ -23,8 +27,27 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
 @tablet: ~"only screen and (max-width: @{tabletSize})";
 @small-desktop: ~"only screen and (max-width: @{smallDesktopSize})";
 
+.dynamic-spacing(@property) {
+    @{property}: @pageSpacingDesktop;
+
+    @media @small-desktop {
+        @{property}: @pageSpacingTablet;
+    }
+
+    @media @mobile {
+        @{property}: @pageSpacingMobile;
+    }
+}
 
 .background-slide(@color: @featureColor, @backgroundColor: transparent, @hoverColor: white, @hoverBackgroundColor: @orangeFeatureColor, @transitionDuration: 0.2s) {
+    .background-slide-base(@color, @backgroundColor, @hoverColor, @hoverBackgroundColor, @transitionDuration);
+
+    &:hover {
+        .background-slide-hover(@hoverColor);
+    }
+}
+
+.background-slide-base(@color: @featureColor, @backgroundColor: transparent, @hoverColor: white, @hoverBackgroundColor: @orangeFeatureColor, @transitionDuration: 0.2s) {
     @background-clip: text, border-box;
     background-size: 200% 100%;
     background-image: linear-gradient(to right, @hoverBackgroundColor 50%, @backgroundColor 50%), linear-gradient(to right, @backgroundColor 50%, @hoverBackgroundColor 50%);
@@ -32,10 +55,6 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
     -webkit-background-clip: @background-clip;
     color: @color;
     transition: background-position @transitionDuration, color @transitionDuration;
-
-    &:hover {
-        .background-slide-hover(@hoverColor);
-    }
 }
 
 .background-slide-hover(@hoverColor: white) {
@@ -44,6 +63,14 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
 }
 
 .text-slide(@color: @featureColor, @hoverColor: @orangeFeatureColor, @transitionDuration: 0.2s) {
+    .text-slide-base(@color, @hoverColor, @transitionDuration);
+
+    &:hover {
+        .text-slide-hover();
+    }
+}
+
+.text-slide-base(@color: @featureColor, @hoverColor: @orangeFeatureColor, @transitionDuration: 0.2s) {
     @background-clip: text;
     background-size: 200% 100%;
     background-image: linear-gradient(to right, @color 50%, @hoverColor 50%);
@@ -51,10 +78,6 @@ When it is included, use the syntax `@import (reference) "..\Styles\common.less"
     -webkit-background-clip: @background-clip;
     color: transparent;
     transition: background-position @transitionDuration;
-
-    &:hover {
-        .text-slide-hover();
-    }
 }
 
 .text-slide-hover() {

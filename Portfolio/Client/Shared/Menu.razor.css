@@ -13,10 +13,27 @@
           justify-content: center;
   font-size: 28px;
   margin-left: 50px;
-  margin-top: 100px;
+  padding-top: 100px;
 }
 nav ::deep a {
   display: inline-block;
+}
+@media only screen and (max-width: 1100px) {
+  nav {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  nav {
+    position: static;
+    min-height: unset;
+    padding-top: 0;
+    margin-left: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 works {
   display: -webkit-box;
@@ -33,6 +50,11 @@ works {
           align-items: flex-start;
   border-left: 1px solid #2571E9;
   padding: 20px 10px;
+}
+@media only screen and (max-width: 800px) {
+  works {
+    display: none;
+  }
 }
 works::before {
   content: "";
@@ -51,6 +73,7 @@ works ::deep a {
   -webkit-transition: background-position 0.2s, color 0.2s;
   transition: background-position 0.2s, color 0.2s;
 }
+works ::deep a.active,
 works ::deep a:hover {
   background-position: -100% 0;
   color: white;
@@ -70,6 +93,19 @@ social-media {
   margin-top: 10px;
   color: #2571E9;
 }
+@media only screen and (max-width: 800px) {
+  social-media {
+    margin-top: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 social-media ::deep a {
   margin: 5px 0;
   background-size: 200% 100%;
@@ -81,6 +117,7 @@ social-media ::deep a {
   -webkit-transition: background-position 0.2s;
   transition: background-position 0.2s;
 }
+social-media ::deep a.active,
 social-media ::deep a:hover {
   background-position: -100% 0;
 }

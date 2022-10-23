@@ -2,22 +2,51 @@
 
 div {
     display: flex;
+
+    @media @mobile {
+        flex-direction: column;
+        margin: @pageSpacingMobile;
+    }
 }
 
 menu {
     min-width: @menuWidth;
+
+    @media @tablet {
+        min-width: @menuWidthTablet;
+    }
+
+    @media @mobile {
+        order: 1;
+    }
 }
 
 header {
+    order: 0;
+    .dynamic-spacing(margin-right);
+
     a {
         display: block;
         max-width: 1050px;
-        padding: 0 @pageSpacing;
+        padding: 0 20px;
+        margin: auto;
+    }
+
+    @media @mobile {
+        margin-right: 0;
     }
 }
 
 section {
     flex: 1;
+
+    @media @mobile {
+        display: contents;
+    }
+}
+
+main {
+    order: 2;
 }
 
 overlay {
@@ -26,6 +55,10 @@ overlay {
         z-index: 1;
         max-width: 15%;
         pointer-events: none;
+
+        @media @mobile {
+            display: none;
+        }
     }
 
     .overlay-1 {
@@ -40,12 +73,20 @@ overlay {
 
     .overlay-3 {
         top: 5%;
-        left: calc(@menuWidth - 7.5%);
+        left: calc(@menuWidth - 10%);
+
+        @media @tablet {
+            left: calc(@menuWidthTablet - 10%);
+        }
     }
 
     .overlay-4 {
         max-width: 20%;
         bottom: 0;
         left: calc(@menuWidth - 15%);
+
+        @media @tablet {
+            left: calc(@menuWidthTablet - 15%);
+        }
     }
 }

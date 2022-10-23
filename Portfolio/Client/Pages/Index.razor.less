@@ -3,8 +3,16 @@
 section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    @spacing: @pageSpacing;
-    gap: @spacing;
-    margin-right: @spacing;
-    margin-bottom: @spacing;
+    .dynamic-spacing(gap);
+    .dynamic-spacing(margin-right);
+    .dynamic-spacing(margin-bottom);
+
+    @media @tablet {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media @mobile {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
 }
