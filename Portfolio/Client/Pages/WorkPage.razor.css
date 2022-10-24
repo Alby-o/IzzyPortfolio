@@ -26,7 +26,7 @@ section a {
 description {
   display: block;
   width: 70%;
-  font-size: 28px;
+  font-size: 22px;
 }
 @media only screen and (max-width: 800px) {
   description {
