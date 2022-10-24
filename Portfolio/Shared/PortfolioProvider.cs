@@ -20,12 +20,31 @@ namespace Portfolio.Shared
                 new Work()
                 {
                     Name = "A Fairy Story",
-                    Description = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.",
+                    Description = "The overall honours project that has been developed is a four-piece diorama that portrays the Grimm Brothers version of Cinderella. The diorama requires viewers to uncover the mystery lying within which will lead them to the story of Cinderella. \nThe layout for the diorama is as seen on the right. The four sections will be set out side by side on a long table covered with a black tablecloth. A light either side of the table will eliminate the diorama to direct the focus of the viewer’s eye.",
                     Date = new DateOnly(2022, 1, 1),
                     Image = "A Fairy Story.jpg",
                     ImageSets = new List<ImageSet>()
                     {
-                        new ImageSet("A Fairy Story.jpg", "A Fairy Story")
+                        new ImageSet("A Fairy Story.jpg", "A Fairy Story"),
+                        new ImageSet(new List<Image>
+                        {
+                            new Image("IMG_9059.jpg", "House inside"),
+                            new Image("IMG_9071.jpg", "House outside"),
+                        }),
+                        new ImageSet("IMG_9224.jpg", "Graveyard"),
+                        new ImageSet(new List<Image>
+                        {
+                            new Image("IMG_9132.jpg", "House inside"),
+                            new Image("IMG_9302.jpg", "House outside"),
+                        }),
+                        new ImageSet("IMG_9084.jpg", "House cutout"),
+                        new ImageSet(new List<Image>
+                        {
+                            new Image("IMG_9208.jpg", "Fireplace"),
+                            new Image("IMG_9307.jpg", "Paintings"),
+                        }),
+                        new ImageSet("IMG_9325.jpg", "Tiles being painted"),
+                        new ImageSet("Final Setup.png", "Drawing of diorama"),
                     }
                 },
                 new Work()
